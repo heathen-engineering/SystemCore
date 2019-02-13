@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f05ff4d51886b074c9022a0508252146, type: 3}
+  m_Name: Saved Data Library
+  m_EditorClassIdentifier: 
+  DeveloperDescription: "Data Libraries allow designers to define \nsave files and
+    easily save and load them\nwithout need of specialized code."
+  Library:
+  - Key: Saved Bool
+    Variable: {fileID: 11400000, guid: ef55a4a6f4d0d6f478056fb0e06b8418, type: 2}
+    Default: {fileID: 11400000, guid: 1da617b4e198aca45ba68127f681a92e, type: 2}
+  - Key: Saved Color
+    Variable: {fileID: 11400000, guid: 4d99b511695f2d648838f62926ef5f4c, type: 2}
+    Default: {fileID: 11400000, guid: b8f163f5b174de341840149f1586f462, type: 2}
+  - Key: Saved Int
+    Variable: {fileID: 11400000, guid: b8dfd705c8d12724eab14f281abbdacf, type: 2}
+    Default: {fileID: 11400000, guid: 143868932c23dc74e92fd655b3af2daa, type: 2}
+  - Key: Saved String
+    Variable: {fileID: 11400000, guid: 0758d1e73c39e8f419387f784b0ef05c, type: 2}
+    Default: {fileID: 11400000, guid: cec309648336fd34eb1258ddb015ebfd, type: 2}
+  - Key: Saved String
+    Variable: {fileID: 11400000, guid: 0758d1e73c39e8f419387f784b0ef05c, type: 2}
+    Default: {fileID: 11400000, guid: cec309648336fd34eb1258ddb015ebfd, type: 2}

@@ -1,0 +1,10 @@
+{
+    "name": "HeathenEngineeringToolbox",
+    "references": [
+        "HeathenSystemsCore"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false
+}
