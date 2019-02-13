@@ -1,0 +1,31 @@
+License
+
+Copyright (c) 2019 Heathen Engineering Ltd
+
+Note that these licensing terms apply only when the standard Unity End User Licensing Agreement (EULA)
+noted at https://unity3d.com/legal/as_terms are not in effect such as but not limited to when aquiring 
+the code or releases of it from GitHub or other repositories. When the asset is aquired from the 
+Unity Asset Store, Unity's standard EULA applies.
+
+The intent of this license is to ensure the availability of use of this source code and to protect
+Heathen Engineering Ltd from claim of fitness, warranty, liability claim or other actions as described in the
+following MIT License.
+
+MIT License
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
