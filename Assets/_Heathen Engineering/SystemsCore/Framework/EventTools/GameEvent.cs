@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace HeathenEngineering.Scriptable
 {
@@ -10,7 +11,8 @@ namespace HeathenEngineering.Scriptable
         [Multiline]
         public string DeveloperDescription = "";
 #endif
-        public List<GameEventListener> listeners; 
+        public List<GameEventListener> listeners = new List<GameEventListener>();
+        public List<UnityAction> actions = new List<UnityAction>();
 
         public void Raise()
         {
@@ -18,6 +20,11 @@ namespace HeathenEngineering.Scriptable
             {
                 if (listeners[i] != null)
                     listeners[i].OnEventRaised();
+            }
+            for (int i = actions.Count - 1; i >= 0; i--)
+            {
+                if (actions[i] != null)
+                    actions[i].Invoke();
             }
         }
 
@@ -28,6 +35,14 @@ namespace HeathenEngineering.Scriptable
         public void RemoveListener(GameEventListener listener)
         {
             listeners.Remove(listener);
+        }
+        public void AddListener(UnityAction listener)
+        {
+            actions.Add(listener);
+        }
+        public void RemoveListener(UnityAction listener)
+        {
+            actions.Remove(listener);
         }
     }
 }

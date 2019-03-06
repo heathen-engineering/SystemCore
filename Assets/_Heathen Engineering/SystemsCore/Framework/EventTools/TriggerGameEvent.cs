@@ -1,12 +1,14 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace HeathenEngineering.Scriptable
 {
     [CreateAssetMenu(menuName = "Events/Trigger Game Event")]
     public class TriggerGameEvent : GameEvent
     {
-        public List<TriggerGameEventListener> triggerListeners;
+        public List<TriggerGameEventListener> triggerListeners = new List<TriggerGameEventListener>();
+        public List<UnityAction<Collider>> triggerActions = new List<UnityAction<Collider>>();
 
         public void Raise(Collider collider)
         {
@@ -21,6 +23,18 @@ namespace HeathenEngineering.Scriptable
                 if (triggerListeners[i] != null)
                     triggerListeners[i].OnEventRaised(collider);
             }
+
+            for (int i = actions.Count - 1; i >= 0; i--)
+            {
+                if (actions[i] != null)
+                    actions[i].Invoke();
+            }
+
+            for (int i = triggerActions.Count - 1; i >= 0; i--)
+            {
+                if (triggerActions[i] != null)
+                    triggerActions[i].Invoke(collider);
+            }
         }
 
         public void AddListener(TriggerGameEventListener listener)
@@ -30,6 +44,14 @@ namespace HeathenEngineering.Scriptable
         public void RemoveListener(TriggerGameEventListener listener)
         {
             triggerListeners.Remove(listener);
+        }
+        public void AddListener(UnityAction<Collider> listener)
+        {
+            triggerActions.Add(listener);
+        }
+        public void RemoveListener(UnityAction<Collider> listener)
+        {
+            triggerActions.Remove(listener);
         }
     }
 }

@@ -1,12 +1,14 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace HeathenEngineering.Scriptable
 {
     [CreateAssetMenu(menuName = "Events/Int Game Event")]
     public class IntGameEvent : GameEvent
     {
-        public List<IntGameEventListener> intListeners;
+        public List<IntGameEventListener> intListeners = new List<IntGameEventListener>();
+        public List<UnityAction<int>> intActions = new List<UnityAction<int>>();
 
         public void Raise(int value)
         {
@@ -21,6 +23,18 @@ namespace HeathenEngineering.Scriptable
                 if (intListeners[i] != null)
                     intListeners[i].OnEventRaised(value);
             }
+
+            for (int i = actions.Count - 1; i >= 0; i--)
+            {
+                if (actions[i] != null)
+                    actions[i].Invoke();
+            }
+
+            for (int i = intListeners.Count - 1; i >= 0; i--)
+            {
+                if (intActions[i] != null)
+                    intActions[i].Invoke(value);
+            }
         }
 
         public void AddListener(IntGameEventListener listener)
@@ -30,6 +44,14 @@ namespace HeathenEngineering.Scriptable
         public void RemoveListener(IntGameEventListener listener)
         {
             intListeners.Remove(listener);
+        }
+        public void AddListener(UnityAction<int> listener)
+        {
+            intActions.Add(listener);
+        }
+        public void RemoveListener(UnityAction<int> listener)
+        {
+            intActions.Remove(listener);
         }
     }
 }

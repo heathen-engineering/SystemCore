@@ -1,10 +1,15 @@
 {
     "name": "HeathenEngineeringToolbox",
     "references": [
-        "HeathenSystemsCore"
+        "HeathenSystemsCore",
+        "Unity.TextMeshPro"
     ],
     "optionalUnityReferences": [],
     "includePlatforms": [],
     "excludePlatforms": [],
-    "allowUnsafeCode": false
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": []
 }
