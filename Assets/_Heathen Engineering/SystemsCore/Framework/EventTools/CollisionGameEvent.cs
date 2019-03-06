@@ -5,7 +5,7 @@ using UnityEngine.Events;
 namespace HeathenEngineering.Scriptable
 {
     [CreateAssetMenu(menuName = "Events/Collision Game Event")]
-    public class CollisionGameEvent : GameEvent
+    public class CollisionGameEvent : GameEvent 
     {
         public List<CollisionGameEventListener> collisionListeners = new List<CollisionGameEventListener>();
         public List<UnityAction<Collision>> collisionActions = new List<UnityAction<Collision>>();
