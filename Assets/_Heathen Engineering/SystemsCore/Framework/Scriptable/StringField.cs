@@ -1,4 +1,5 @@
-﻿using HeathenEngineering.Serializable;
+﻿using HeathenEngineering.Events;
+using HeathenEngineering.Serializable;
 using UnityEngine;
 
 namespace HeathenEngineering.Scriptable

@@ -33,7 +33,7 @@ namespace HeathenEngineering.Serializable
             set { w = value; }
         }
 
-        public SerializableColor() : base() { }
+        public SerializableColor() : base() { r = 1; g = 1; b = 1; a = 1; }
 
         public SerializableColor(Color color)
         {

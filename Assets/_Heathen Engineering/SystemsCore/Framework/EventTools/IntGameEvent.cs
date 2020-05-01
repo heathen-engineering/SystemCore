@@ -2,8 +2,12 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace HeathenEngineering.Scriptable
+namespace HeathenEngineering.Events
 {
+    /// <summary>
+    /// <para>Create an event as an object in your project folder.</para>
+    /// <para>This represents a int game event ... that is an event defined in your project folder that sends a int when raised.</para>
+    /// </summary>
     [CreateAssetMenu(menuName = "Events/Int Game Event")]
     public class IntGameEvent : GameEvent
     {

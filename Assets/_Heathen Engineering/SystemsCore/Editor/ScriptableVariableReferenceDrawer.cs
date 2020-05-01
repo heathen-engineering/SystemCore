@@ -2,7 +2,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace HeathenEngineering.Scriptable
+namespace HeathenEngineering.Scriptable.Editors
 {
     [CustomPropertyDrawer(typeof(VariableReference),true)]
     public class ScriptableVariableReferenceDrawer : PropertyDrawer

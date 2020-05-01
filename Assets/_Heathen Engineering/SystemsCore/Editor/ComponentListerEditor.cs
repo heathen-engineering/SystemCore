@@ -2,7 +2,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace HeathenEngineering.Tools
+namespace HeathenEngineering.Tools.Editors
 {
     [CustomEditor(typeof(ComponentLister))]
     public class ComponentListerEditor : Editor

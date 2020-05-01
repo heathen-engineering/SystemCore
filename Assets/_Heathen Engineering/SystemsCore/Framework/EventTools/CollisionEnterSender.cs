@@ -1,8 +1,11 @@
 ﻿using HeathenEngineering.Serializable;
 using UnityEngine;
 
-namespace HeathenEngineering.Scriptable
+namespace HeathenEngineering.Events
 {
+    /// <summary>
+    /// A componenet behaviour that riases a <see cref="CollisionGameEvent"/> in the OnCollisionEnter UnityEvent.
+    /// </summary>
     [AddComponentMenu("Heathen/Events/Collision Enter Sender")]
     public class CollisionEnterSender : MonoBehaviour
     {

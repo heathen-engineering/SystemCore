@@ -2,7 +2,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace HeathenEngineering.Scriptable
+namespace HeathenEngineering.Scriptable.Editors
 {
     [CustomPropertyDrawer(typeof(SerializableColor))]
     public class SerializableColorDrawer : PropertyDrawer

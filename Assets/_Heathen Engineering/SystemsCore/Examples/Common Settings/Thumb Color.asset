@@ -3,8 +3,9 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -12,8 +13,8 @@ MonoBehaviour:
   m_Name: Thumb Color
   m_EditorClassIdentifier: 
   DeveloperDescription: Thumb Color
-  Value:
-    x: 0.3045987
-    y: 0.56269854
-    z: 0.759
+  value:
+    x: 1
+    y: 1
+    z: 1
     w: 1

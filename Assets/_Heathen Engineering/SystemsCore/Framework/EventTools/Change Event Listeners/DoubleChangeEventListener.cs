@@ -1,8 +1,9 @@
-﻿using HeathenEngineering.Serializable;
+﻿using HeathenEngineering.Scriptable;
+using HeathenEngineering.Serializable;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace HeathenEngineering.Scriptable
+namespace HeathenEngineering.Events
 {
     [AddComponentMenu("Heathen/Events/Double Change Event Listener")]
     public class DoubleChangeEventListener : ChangeEventListener<double>

@@ -2,6 +2,22 @@
 
 namespace HeathenEngineering.Scriptable
 {
+    /// <summary>
+    /// <para>Can be used in place of bool to represent an Boolean setting that can be defined in your project as a <see cref="BoolVariable"/></para>
+    /// </summary>
+    /// <example>
+    /// <list type="bullet">
+    /// <item>
+    /// <description>Show a BoolReference on your game object</description>
+    /// <code>
+    /// public class ExampleBehaviour : MonoBehaviour
+    /// {
+    ///    public BoolReference boolValue = new BoolReference(false);
+    /// }
+    /// </code>
+    /// </item>
+    /// </list>
+    /// </example>
     [Serializable]
     public class BoolReference : VariableReference<bool>
     {

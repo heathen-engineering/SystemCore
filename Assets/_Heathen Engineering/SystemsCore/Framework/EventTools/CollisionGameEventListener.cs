@@ -1,7 +1,7 @@
 ﻿using HeathenEngineering.Serializable;
 using UnityEngine;
 
-namespace HeathenEngineering.Scriptable
+namespace HeathenEngineering.Events
 {
     [AddComponentMenu("Heathen/Events/Collision Game Event Listener")]
     public class CollisionGameEventListener : MonoBehaviour

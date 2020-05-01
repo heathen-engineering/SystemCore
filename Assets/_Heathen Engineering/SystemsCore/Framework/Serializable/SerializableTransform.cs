@@ -21,7 +21,7 @@ namespace HeathenEngineering.Serializable
         {
             position = new SerializableVector3();
             rotation = new SerializableQuaternion();
-            localScale = new SerializableVector3();
+            localScale = new SerializableVector3(1,1,1);
         }
 
         public SerializableTransform(SerializableVector3 position, SerializableQuaternion rotation, SerializableVector3 localScale)

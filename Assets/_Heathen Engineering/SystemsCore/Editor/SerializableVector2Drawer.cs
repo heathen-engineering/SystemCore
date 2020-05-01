@@ -2,7 +2,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace HeathenEngineering.Scriptable
+namespace HeathenEngineering.Scriptable.Editors
 {
     [CustomPropertyDrawer(typeof(SerializableVector2))]
     public class SerializableVector2Drawer : PropertyDrawer

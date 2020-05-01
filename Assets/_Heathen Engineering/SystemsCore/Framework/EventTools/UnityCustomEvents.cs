@@ -1,10 +1,11 @@
 ﻿
 using HeathenEngineering.Scriptable;
+using HeathenEngineering.Serializable;
 using System;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace HeathenEngineering.Serializable
+namespace HeathenEngineering.Events
 {
     /****************************************************************
      * Unity's built in property drawers cannot draw generic classes

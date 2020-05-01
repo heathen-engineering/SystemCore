@@ -1,13 +1,22 @@
 ﻿using HeathenEngineering.Serializable;
 using UnityEngine;
 
-namespace HeathenEngineering.Scriptable
+namespace HeathenEngineering.Events
 {
+    /// <summary>
+    /// A componenet behaviour that registers to listen on a specific GameEvent and raises its <see cref="BoolGameEventListener.BoolResponce"/> event when recieved.
+    /// </summary>
     [AddComponentMenu("Heathen/Events/Bool Game Event Listener")]
     public class BoolGameEventListener : MonoBehaviour
     {
+        /// <summary>
+        /// The <see cref="BoolGameEvent"/> to listen for
+        /// </summary>
         public BoolGameEvent Event;
 
+        /// <summary>
+        /// Occures when the <see cref="Event"/> is raised
+        /// </summary>
         public UnityBoolEvent BoolResponce;
 
         private void OnEnable()

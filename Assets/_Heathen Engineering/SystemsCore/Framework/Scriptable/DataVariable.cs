@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HeathenEngineering.Events;
+using System;
 using UnityEngine;
 
 namespace HeathenEngineering.Scriptable
@@ -6,7 +7,7 @@ namespace HeathenEngineering.Scriptable
     [Serializable]
     public abstract class DataVariable<T> : DataVariable
     {
-        public abstract T DataValue { get; set; }
+        public abstract T Value { get; set; }
 
         public abstract void SetValue(T value);
 

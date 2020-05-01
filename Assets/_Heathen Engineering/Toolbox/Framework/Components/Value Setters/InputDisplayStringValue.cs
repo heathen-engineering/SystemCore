@@ -27,7 +27,7 @@ namespace HeathenEngineering.UIX
 
         private void Update()
         {
-            if (alwaysApply || !Application.isPlaying)
+            if (alwaysApply.Value || !Application.isPlaying)
                 Refresh();
         }
 

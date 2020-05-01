@@ -3,6 +3,22 @@ using UnityEngine;
 
 namespace HeathenEngineering.Scriptable
 {
+    /// <summary>
+    /// <para>Can be used in place of AnimationCurve to represent an animation curve setting that can be defined in your project as a <see cref="AnimationCurveVariable"/></para>
+    /// </summary>
+    /// <example>
+    /// <list type="bullet">
+    /// <item>
+    /// <description>Show an AnimationCurveReference on your game object</description>
+    /// <code>
+    /// public class ExampleBehaviour : MonoBehaviour
+    /// {
+    ///    public AnimationCurveReference animationCurve = new AnimationCurveReference(AnimationCurve.Linear(0, 1, 1, 1));
+    /// }
+    /// </code>
+    /// </item>
+    /// </list>
+    /// </example>
     [Serializable]
     public class AnimationCurveReference : VariableReference<AnimationCurve>
     {

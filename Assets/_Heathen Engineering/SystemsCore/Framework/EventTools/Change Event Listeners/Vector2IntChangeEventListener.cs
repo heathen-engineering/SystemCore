@@ -1,8 +1,9 @@
-﻿using HeathenEngineering.Serializable;
+﻿using HeathenEngineering.Scriptable;
+using HeathenEngineering.Serializable;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace HeathenEngineering.Scriptable
+namespace HeathenEngineering.Events
 {
     [AddComponentMenu("Heathen/Events/Vector2Int Change Event Listener")]
     public class Vector2IntChangeEventListener : ChangeEventListener<SerializableVector2Int>

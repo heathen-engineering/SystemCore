@@ -2,8 +2,12 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace HeathenEngineering.Scriptable
+namespace HeathenEngineering.Events
 {
+    /// <summary>
+    /// <para>Create an event as an object in your project folder.</para>
+    /// <para>This represents a double game event ... that is an event defined in your project folder that sends a double when raised.</para>
+    /// </summary>
     [CreateAssetMenu(menuName = "Events/Double Game Event")]
     public class DoubleGameEvent : GameEvent
     {

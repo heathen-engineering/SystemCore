@@ -1,4 +1,5 @@
-﻿using HeathenEngineering.Serializable;
+﻿using HeathenEngineering.Events;
+using HeathenEngineering.Serializable;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,15 +12,16 @@ namespace HeathenEngineering.Scriptable
         [Multiline]
         public string DeveloperDescription = "";
 #endif
-        public SerializableVector3 Value;
+        [SerializeField]
+        private SerializableVector3 value;
         [HideInInspector]
         public List<ChangeEventListener<SerializableVector3>> Listeners = new List<ChangeEventListener<SerializableVector3>>();
 
-        public override SerializableVector3 DataValue
+        public override SerializableVector3 Value
         {
             get
             {
-                return Value;
+                return this.value;
             }
 
             set
@@ -32,7 +34,7 @@ namespace HeathenEngineering.Scriptable
         {
             get
             {
-                return DataValue;
+                return this.value;
             }
 
             set
@@ -46,22 +48,22 @@ namespace HeathenEngineering.Scriptable
 
         public override void SetValue(SerializableVector3 value)
         {
-            if (Value.x != value.x
-                || Value.y != value.y
-                || Value.z != value.z)
+            if (this.value.x != value.x
+                || this.value.y != value.y
+                || this.value.z != value.z)
             {
-                Value = value;
+                this.value = value;
                 Raise();
             }
         }
 
         public override void SetValue(DataVariable<SerializableVector3> value)
         {
-            if (Value.x != value.DataValue.x
-                || Value.y != value.DataValue.y
-                || Value.z != value.DataValue.z)
+            if (this.value.x != value.Value.x
+                || this.value.y != value.Value.y
+                || this.value.z != value.Value.z)
             {
-                Value = value.DataValue;
+                this.value = value.Value;
                 Raise();
             }
         }

@@ -3,6 +3,22 @@ using UnityEngine;
 
 namespace HeathenEngineering.Scriptable
 {
+    /// <summary>
+    /// <para>Can be used in place of camera to represent a Camera setting that can be defined in your project as a <see cref="CameraVariable"/></para>
+    /// </summary>
+    /// <example>
+    /// <list type="bullet">
+    /// <item>
+    /// <description>Show a CameraReference on your game object</description>
+    /// <code>
+    /// public class ExampleBehaviour : MonoBehaviour
+    /// {
+    ///    public CameraReference cameraValue;
+    /// }
+    /// </code>
+    /// </item>
+    /// </list>
+    /// </example>
     [Serializable]
     public class CameraReference : VariableReference<Camera>
     {

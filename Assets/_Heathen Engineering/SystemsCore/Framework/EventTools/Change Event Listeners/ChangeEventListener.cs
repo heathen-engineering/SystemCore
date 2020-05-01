@@ -1,7 +1,8 @@
-﻿using UnityEngine;
+﻿using HeathenEngineering.Scriptable;
+using UnityEngine;
 using UnityEngine.Events;
 
-namespace HeathenEngineering.Scriptable
+namespace HeathenEngineering.Events
 {
     public abstract class ChangeEventListener<T> : MonoBehaviour
     {
@@ -15,7 +16,7 @@ namespace HeathenEngineering.Scriptable
             if (EventSource != null)
                 EventSource.AddListener(this);
             if (raiseOnBind)
-                ValueChanged.Invoke(EventSource.DataValue);
+                ValueChanged.Invoke(EventSource.Value);
         }
 
         public virtual void UnregisterListener()

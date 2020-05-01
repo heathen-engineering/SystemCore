@@ -1,7 +1,7 @@
 ﻿using HeathenEngineering.Serializable;
 using UnityEngine;
 
-namespace HeathenEngineering.Scriptable
+namespace HeathenEngineering.Events
 {
     [AddComponentMenu("Heathen/Events/Trigger Enter Sender")]
     public class TriggerEnterSender : MonoBehaviour

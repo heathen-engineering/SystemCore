@@ -3,10 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ExampleDemo_RandomizeColor : MonoBehaviour
+namespace HeathenEngineering.Tools.Demo
 {
-    public void RandomizeColor(ColorVariable target)
+    public class ExampleDemo_RandomizeColor : MonoBehaviour
     {
-        target.SetValue(Random.ColorHSV());
+        public void RandomizeColor(ColorVariable target)
+        {
+            target.SetValue(Random.ColorHSV());
+        }
     }
 }
