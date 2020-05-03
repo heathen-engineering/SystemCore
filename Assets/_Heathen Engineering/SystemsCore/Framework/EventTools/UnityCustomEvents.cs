@@ -29,6 +29,31 @@ namespace HeathenEngineering.Events
     //Commonly used single parameter UnityEvents
     #region Single Parameter Events
     [Serializable]
+    public class UnityDataEvent : UnityEvent<EventData>
+    { }
+
+    [Serializable]
+    public class UnityDataEvent<T> : UnityEvent<EventData<T>>
+    { }
+
+    [Serializable]
+    public class UnityChangeEvent<T> : UnityEvent<ChangeEventData<T>>
+    { }
+
+    [Serializable]
+    public class UnityCollectionChangeEvent<T> : UnityEvent<CollectionChangeEventData<T>>
+    { }
+
+    #region Primative Events
+    [Serializable]
+    public class UnitySystemObjectEvent : UnityEvent<object>
+    { }
+
+    [Serializable]
+    public class UnityObjectEvent : UnityEvent<UnityEngine.Object>
+    { }
+
+    [Serializable]
     public class UnityFloatEvent : UnityEvent<float>
     { }
 
@@ -42,6 +67,18 @@ namespace HeathenEngineering.Events
 
     [Serializable]
     public class UnityDoubleEvent : UnityEvent<double>
+    { }
+
+    [Serializable]
+    public class UnityLongEvent : UnityEvent<long>
+    { }
+
+    [Serializable]
+    public class UnityUnsignedLongEvent : UnityEvent<ulong>
+    { }
+
+    [Serializable]
+    public class UnityUnsignedIntEvent : UnityEvent<uint>
     { }
 
     [Serializable]
@@ -123,6 +160,377 @@ namespace HeathenEngineering.Events
     [Serializable]
     public class UnityQuaternionEvent : UnityEvent<Quaternion>
     { }
+    #endregion
+
+    #region Data Events
+    [Serializable]
+    public class UnitySystemObjectDataEvent : UnityDataEvent<object>
+    { }
+
+    [Serializable]
+    public class UnityObjectDataEvent : UnityDataEvent<UnityEngine.Object>
+    { }
+
+    [Serializable]
+    public class UnityFloatDataEvent : UnityDataEvent<float>
+    { }
+
+    [Serializable]
+    public class UnityIntDataEvent : UnityDataEvent<int>
+    { }
+
+    [Serializable]
+    public class UnityBoolDataEvent : UnityDataEvent<bool>
+    { }
+
+    [Serializable]
+    public class UnityDoubleDataEvent : UnityDataEvent<double>
+    { }
+
+    [Serializable]
+    public class UnityLongDataEvent : UnityDataEvent<long>
+    { }
+
+    [Serializable]
+    public class UnityUnsignedLongDataEvent : UnityDataEvent<ulong>
+    { }
+
+    [Serializable]
+    public class UnityUnsignedIntDataEvent : UnityDataEvent<uint>
+    { }
+
+    [Serializable]
+    public class UnityStringDataEvent : UnityDataEvent<string>
+    { }
+
+    [Serializable]
+    public class UnityColorDataEvent : UnityDataEvent<Color>
+    { }
+
+    [Serializable]
+    public class UnitySerializableColorDataEvent : UnityDataEvent<SerializableColor>
+    { }
+
+    [Serializable]
+    public class UnitySpriteDataEvent : UnityDataEvent<Sprite>
+    { }
+
+    [Serializable]
+    public class UnityTextureDataEvent : UnityDataEvent<Texture>
+    { }
+
+    [Serializable]
+    public class UnityRigidbodyDataEvent : UnityDataEvent<Rigidbody>
+    { }
+
+    [Serializable]
+    public class UnityColliderDataEvent : UnityDataEvent<Collider>
+    { }
+
+    [Serializable]
+    public class UnityCollisionDataEvent : UnityDataEvent<Collision>
+    { }
+
+    [Serializable]
+    public class UnityTransformDataEvent : UnityDataEvent<Transform>
+    { }
+
+    [Serializable]
+    public class UnityRectTransformDataEvent : UnityDataEvent<RectTransform>
+    { }
+
+    [Serializable]
+    public class UnityGameObjectDataEvent : UnityDataEvent<GameObject>
+    { }
+
+    [Serializable]
+    public class UnityVector2DataEvent : UnityDataEvent<Vector2>
+    { }
+
+    [Serializable]
+    public class UnityVector2IntDataEvent : UnityDataEvent<Vector2Int>
+    { }
+
+    [Serializable]
+    public class UnitySerializableVector2DataEvent : UnityDataEvent<SerializableVector2>
+    { }
+
+    [Serializable]
+    public class UnitySerializableVector2IntDataEvent : UnityDataEvent<SerializableVector2Int>
+    { }
+
+    [Serializable]
+    public class UnityVector3DataEvent : UnityDataEvent<Vector3>
+    { }
+
+    [Serializable]
+    public class UnitySerializableVector3DataEvent : UnityDataEvent<SerializableVector3>
+    { }
+
+    [Serializable]
+    public class UnityVector4DataEvent : UnityDataEvent<Vector4>
+    { }
+
+    [Serializable]
+    public class UnitySerializableVector4DataEvent : UnityDataEvent<SerializableVector4>
+    { }
+
+    [Serializable]
+    public class UnitySerializableTransfromDataEvent : UnityDataEvent<SerializableTransform>
+    { }
+
+    [Serializable]
+    public class UnitySerializableRectTransfromDataEvent : UnityDataEvent<SerializableRectTransform>
+    { }
+
+    [Serializable]
+    public class UnitySerializableQuaternionDataEvent : UnityDataEvent<SerializableQuaternion>
+    { }
+    #endregion
+
+    #region Change Events
+    [Serializable]
+    public class UnitySystemObjectChangeEvent : UnityChangeEvent<object>
+    { }
+
+    [Serializable]
+    public class UnityObjectChangeEvent : UnityChangeEvent<UnityEngine.Object>
+    { }
+
+    [Serializable]
+    public class UnityFloatChangeEvent : UnityChangeEvent<float>
+    { }
+
+    [Serializable]
+    public class UnityIntChangeEvent : UnityChangeEvent<int>
+    { }
+
+    [Serializable]
+    public class UnityBoolChangeEvent : UnityChangeEvent<bool>
+    { }
+
+    [Serializable]
+    public class UnityDoubleChangeEvent : UnityChangeEvent<double>
+    { }
+
+    [Serializable]
+    public class UnityLongChangeEvent : UnityChangeEvent<long>
+    { }
+
+    [Serializable]
+    public class UnityUnsignedLongChangeEvent : UnityChangeEvent<ulong>
+    { }
+
+    [Serializable]
+    public class UnityUnsignedIntChangeEvent : UnityChangeEvent<uint>
+    { }
+
+    [Serializable]
+    public class UnityStringChangeEvent : UnityChangeEvent<string>
+    { }
+
+    [Serializable]
+    public class UnityColorChangeEvent : UnityChangeEvent<Color>
+    { }
+
+    [Serializable]
+    public class UnitySerializableColorChangeEvent : UnityChangeEvent<SerializableColor>
+    { }
+
+    [Serializable]
+    public class UnitySpriteChangeEvent : UnityChangeEvent<Sprite>
+    { }
+
+    [Serializable]
+    public class UnityTextureChangeEvent : UnityChangeEvent<Texture>
+    { }
+
+    [Serializable]
+    public class UnityRigidbodyChangeEvent : UnityChangeEvent<Rigidbody>
+    { }
+
+    [Serializable]
+    public class UnityColliderChangeEvent : UnityChangeEvent<Collider>
+    { }
+
+    [Serializable]
+    public class UnityCollisionChangeEvent : UnityChangeEvent<Collision>
+    { }
+
+    [Serializable]
+    public class UnityTransformChangeEvent : UnityChangeEvent<Transform>
+    { }
+
+    [Serializable]
+    public class UnityRectTransformChangeEvent : UnityChangeEvent<RectTransform>
+    { }
+
+    [Serializable]
+    public class UnityGameObjectChangeEvent : UnityChangeEvent<GameObject>
+    { }
+
+    [Serializable]
+    public class UnityVector2ChangeEvent : UnityChangeEvent<Vector2>
+    { }
+
+    [Serializable]
+    public class UnityVector2IntChangeEvent : UnityChangeEvent<Vector2Int>
+    { }
+
+    [Serializable]
+    public class UnitySerializableVector2ChangeEvent : UnityChangeEvent<SerializableVector2>
+    { }
+
+    [Serializable]
+    public class UnitySerializableVector2IntChangeEvent : UnityChangeEvent<SerializableVector2Int>
+    { }
+
+    [Serializable]
+    public class UnityVector3ChangeEvent : UnityChangeEvent<Vector3>
+    { }
+
+    [Serializable]
+    public class UnitySerializableVector3ChangeEvent : UnityChangeEvent<SerializableVector3>
+    { }
+
+    [Serializable]
+    public class UnityVector4ChangeEvent : UnityChangeEvent<Vector4>
+    { }
+
+    [Serializable]
+    public class UnitySerializableVector4ChangeEvent : UnityChangeEvent<SerializableVector4>
+    { }
+
+    [Serializable]
+    public class UnitySerializableTransformChangeEvent : UnityChangeEvent<SerializableTransform>
+    { }
+
+    [Serializable]
+    public class UnitySerializableRectTransformChangeEvent : UnityChangeEvent<SerializableRectTransform>
+    { }
+
+    [Serializable]
+    public class UnitySerializableQuaternionChangeEvent : UnityChangeEvent<SerializableQuaternion>
+    { }
+    #endregion
+
+    #region Primative Events
+    [Serializable]
+    public class UnitySystemObjectCollectionEvent : UnityCollectionChangeEvent<object>
+    { }
+
+    [Serializable]
+    public class UnityObjectCollectionEvent : UnityCollectionChangeEvent<UnityEngine.Object>
+    { }
+
+    [Serializable]
+    public class UnityFloatCollectionEvent : UnityCollectionChangeEvent<float>
+    { }
+
+    [Serializable]
+    public class UnityIntCollectionEvent : UnityCollectionChangeEvent<int>
+    { }
+
+    [Serializable]
+    public class UnityBoolCollectionEvent : UnityCollectionChangeEvent<bool>
+    { }
+
+    [Serializable]
+    public class UnityDoubleCollectionEvent : UnityCollectionChangeEvent<double>
+    { }
+
+    [Serializable]
+    public class UnityLongCollectionEvent : UnityCollectionChangeEvent<long>
+    { }
+
+    [Serializable]
+    public class UnityUnsignedLongCollectionEvent : UnityCollectionChangeEvent<ulong>
+    { }
+
+    [Serializable]
+    public class UnityUnsignedIntCollectionEvent : UnityCollectionChangeEvent<uint>
+    { }
+
+    [Serializable]
+    public class UnityStringCollectionEvent : UnityCollectionChangeEvent<string>
+    { }
+
+    [Serializable]
+    public class UnityColorCollectionEvent : UnityCollectionChangeEvent<Color>
+    { }
+
+    [Serializable]
+    public class UnitySerializableColorCollectionEvent : UnityCollectionChangeEvent<SerializableColor>
+    { }
+
+    [Serializable]
+    public class UnitySpriteCollectionEvent : UnityCollectionChangeEvent<Sprite>
+    { }
+
+    [Serializable]
+    public class UnityTextureCollectionEvent : UnityCollectionChangeEvent<Texture>
+    { }
+
+    [Serializable]
+    public class UnityRigidbodyCollectionEvent : UnityCollectionChangeEvent<Rigidbody>
+    { }
+
+    [Serializable]
+    public class UnityColliderCollectionEvent : UnityCollectionChangeEvent<Collider>
+    { }
+
+    [Serializable]
+    public class UnityCollisionCollectionEvent : UnityCollectionChangeEvent<Collision>
+    { }
+
+    [Serializable]
+    public class UnityTransformCollectionEvent : UnityCollectionChangeEvent<Transform>
+    { }
+
+    [Serializable]
+    public class UnityRectTransformCollectionEvent : UnityCollectionChangeEvent<RectTransform>
+    { }
+
+    [Serializable]
+    public class UnityGameObjectCollectionEvent : UnityCollectionChangeEvent<GameObject>
+    { }
+
+    [Serializable]
+    public class UnityVector2CollectionEvent : UnityCollectionChangeEvent<Vector2>
+    { }
+
+    [Serializable]
+    public class UnityVector2IntCollectionEvent : UnityCollectionChangeEvent<Vector2Int>
+    { }
+
+    [Serializable]
+    public class UnitySerializableVector2CollectionEvent : UnityCollectionChangeEvent<SerializableVector2>
+    { }
+
+    [Serializable]
+    public class UnitySerializableVector2IntCollectionEvent : UnityCollectionChangeEvent<SerializableVector2Int>
+    { }
+
+    [Serializable]
+    public class UnityVector3CollectionEvent : UnityCollectionChangeEvent<Vector3>
+    { }
+
+    [Serializable]
+    public class UnitySerializableVector3CollectionEvent : UnityCollectionChangeEvent<SerializableVector3>
+    { }
+
+    [Serializable]
+    public class UnityVector4CollectionEvent : UnityCollectionChangeEvent<Vector4>
+    { }
+
+    [Serializable]
+    public class UnitySerializableVector4CollectionEvent : UnityCollectionChangeEvent<SerializableVector4>
+    { }
+
+    [Serializable]
+    public class UnityQuaternionCollectionEvent : UnityCollectionChangeEvent<Quaternion>
+    { }
+    #endregion
     #endregion
 
     //Commonly used double parameter UnityEvents in .NET style with a Unity twist e.g. eventHandler(GameObject sender, T data)

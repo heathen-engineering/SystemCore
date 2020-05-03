@@ -1,52 +1,22 @@
 ﻿using HeathenEngineering.Scriptable;
-using HeathenEngineering.Serializable;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace HeathenEngineering.Events
 {
-    [AddComponentMenu("Heathen/Events/Bool Change Event Listener")]
+    [AddComponentMenu("System Core/Events/Bool Change Event Listener")]
     public class BoolChangeEventListener : ChangeEventListener<bool>
     {
         public BoolVariable eventSource;
 
-        public UnityBoolEvent valueChanged;
+        public UnityBoolChangeEvent valueChanged;
+        public UnityBoolDataEvent changed;
 
-        public override DataVariable<bool> EventSource
-        {
-            get
-            {
-                return eventSource;
-            }
+        public override DataVariable<bool> m_variable => eventSource;
 
-            set
-            {
-                UnregisterListener();
-                eventSource = (BoolVariable)value;
-                RegisterListener();
-            }
-        }
+        public override UnityChangeEvent<bool> m_changeresponce => valueChanged;
 
-        public override UnityEvent<bool> ValueChanged
-        {
-            get
-            {
-                return valueChanged;
-            }
-            set
-            {
-                valueChanged = (UnityBoolEvent)value;
-            }
-        }
+        public override GameEvent<bool> m_event => eventSource;
 
-        private void OnEnable()
-        {
-            RegisterListener();
-        }
-
-        private void OnDisable()
-        {
-            UnregisterListener();
-        }
+        public override UnityDataEvent<bool> m_responce => changed;
     }
 }

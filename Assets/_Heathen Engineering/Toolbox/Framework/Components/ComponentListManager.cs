@@ -3,10 +3,10 @@ using UnityEngine;
 
 namespace HeathenEngineering.Tools
 {
-    [AddComponentMenu("Heathen/Generic/Component List Manager")]
+    [AddComponentMenu("System Core/Generic/Component List Manager")]
     public class ComponentListManager : MonoBehaviour
     {
-        public ComponentList List;
+        public ComponentPointerListVariable List;
         public bool ClearOnStart = false;
         public bool ClearOnDestroy = false;
         public bool ClearOnEnable = false;
@@ -15,41 +15,41 @@ namespace HeathenEngineering.Tools
         private void Start()
         {
             if (ClearOnStart && List != null)
-                List.Values.Clear();
+                List.Clear();
         }
 
         private void OnDestroy()
         {
             if (ClearOnDestroy && List != null)
-                List.Values.Clear();
+                List.Clear();
         }
 
         private void OnEnable()
         {
             if (ClearOnEnable && List != null)
-                List.Values.Clear();
+                List.Clear();
         }
 
         private void OnDisable()
         {
             if (ClearOnDisable && List != null)
-                List.Values.Clear();
+                List.Clear();
         }
 
         public void AddComponenet(Component component)
         {
-            List.AddComponent(component);
+            List.Add(component);
         }
 
         public void RemoveComponenet(Component component)
         {
-            List.RemoveComponent(component);
+            List.Remove(component);
         }
 
         public void Clear()
         {
             if (List != null)
-                List.Values.Clear();
+                List.Clear();
         }
     }
 }

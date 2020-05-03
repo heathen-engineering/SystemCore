@@ -6,7 +6,7 @@ namespace HeathenEngineering.Events
     /// <summary>
     /// A componenet behaviour that riases a <see cref="CollisionGameEvent"/> in the OnCollisionExit UnityEvent.
     /// </summary>
-    [AddComponentMenu("Heathen/Events/Collision Exit Sender")]
+    [AddComponentMenu("System Core/Events/Collision Exit Sender")]
     public class CollisionExitSender : MonoBehaviour
     {
         [Header("Game Event")]

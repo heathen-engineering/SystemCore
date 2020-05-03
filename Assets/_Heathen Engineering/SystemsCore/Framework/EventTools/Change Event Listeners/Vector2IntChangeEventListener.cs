@@ -1,63 +1,23 @@
 ﻿using HeathenEngineering.Scriptable;
 using HeathenEngineering.Serializable;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace HeathenEngineering.Events
 {
-    [AddComponentMenu("Heathen/Events/Vector2Int Change Event Listener")]
+    [AddComponentMenu("System Core/Events/Vector2Int Change Event Listener")]
     public class Vector2IntChangeEventListener : ChangeEventListener<SerializableVector2Int>
     {
         public Vector2IntVariable eventSource;
 
-        public UnitySerializableVector2IntEvent valueChanged;
-        public UnityVector2IntEvent Vector2IntChanged;
+        public UnitySerializableVector2IntChangeEvent valueChanged;
+        public UnitySerializableVector2IntDataEvent changed;
 
-        private void Start()
-        {
-            valueChanged.AddListener(CascadeCall);
-        }
+        public override DataVariable<SerializableVector2Int> m_variable => eventSource;
 
-        public override DataVariable<SerializableVector2Int> EventSource
-        {
-            get
-            {
-                return eventSource;
-            }
+        public override UnityChangeEvent<SerializableVector2Int> m_changeresponce => valueChanged;
 
-            set
-            {
-                UnregisterListener();
-                eventSource = (Vector2IntVariable)value;
-                RegisterListener();
-            }
-        }
+        public override GameEvent<SerializableVector2Int> m_event => eventSource;
 
-        public override UnityEvent<SerializableVector2Int> ValueChanged
-        {
-            get
-            {
-                return valueChanged;
-            }
-            set
-            {
-                valueChanged = (UnitySerializableVector2IntEvent)value;
-            }
-        }
-
-        private void OnEnable()
-        {
-            RegisterListener();
-        }
-
-        private void OnDisable()
-        {
-            UnregisterListener();
-        }
-
-        private void CascadeCall(SerializableVector2Int v2)
-        {
-            Vector2IntChanged.Invoke(v2);
-        }
+        public override UnityDataEvent<SerializableVector2Int> m_responce => changed;
     }
 }

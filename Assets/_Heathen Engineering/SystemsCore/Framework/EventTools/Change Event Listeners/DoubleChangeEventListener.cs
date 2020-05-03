@@ -1,52 +1,22 @@
 ﻿using HeathenEngineering.Scriptable;
-using HeathenEngineering.Serializable;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace HeathenEngineering.Events
 {
-    [AddComponentMenu("Heathen/Events/Double Change Event Listener")]
+    [AddComponentMenu("System Core/Events/Double Change Event Listener")]
     public class DoubleChangeEventListener : ChangeEventListener<double>
     {
         public DoubleVariable eventSource;
 
-        public UnityDoubleEvent valueChanged;
+        public UnityDoubleChangeEvent valueChanged;
+        public UnityDoubleDataEvent changed;
 
-        public override DataVariable<double> EventSource
-        {
-            get
-            {
-                return eventSource;
-            }
+        public override DataVariable<double> m_variable => eventSource;
 
-            set
-            {
-                UnregisterListener();
-                eventSource = (DoubleVariable)value;
-                RegisterListener();
-            }
-        }
+        public override UnityChangeEvent<double> m_changeresponce => valueChanged;
 
-        public override UnityEvent<double> ValueChanged
-        {
-            get
-            {
-                return valueChanged;
-            }
-            set
-            {
-                valueChanged = (UnityDoubleEvent)value;
-            }
-        }
+        public override GameEvent<double> m_event => eventSource;
 
-        private void OnEnable()
-        {
-            RegisterListener();
-        }
-
-        private void OnDisable()
-        {
-            UnregisterListener();
-        }
+        public override UnityDataEvent<double> m_responce => changed;
     }
 }

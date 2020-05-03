@@ -1,63 +1,23 @@
 ﻿using HeathenEngineering.Scriptable;
 using HeathenEngineering.Serializable;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace HeathenEngineering.Events
 {
-    [AddComponentMenu("Heathen/Events/Color Change Event Listener")]
+    [AddComponentMenu("System Core/Events/Color Change Event Listener")]
     public class ColorChangeEventListener : ChangeEventListener<SerializableColor>
     {
         public ColorVariable eventSource;
 
-        public UnitySerializableColorEvent valueChanged;
-        public UnityColorEvent ColorChanged;
+        public UnitySerializableColorChangeEvent valueChanged;
+        public UnitySerializableColorDataEvent changed;
 
-        private void Start()
-        {
-            valueChanged.AddListener(CascadeCall);
-        }
+        public override DataVariable<SerializableColor> m_variable => eventSource;
 
-        public override DataVariable<SerializableColor> EventSource
-        {
-            get
-            {
-                return eventSource;
-            }
+        public override UnityChangeEvent<SerializableColor> m_changeresponce => valueChanged;
 
-            set
-            {
-                UnregisterListener();
-                eventSource = (ColorVariable)value;
-                RegisterListener();
-            }
-        }
+        public override GameEvent<SerializableColor> m_event => eventSource;
 
-        public override UnityEvent<SerializableColor> ValueChanged
-        {
-            get
-            {
-                return valueChanged;
-            }
-            set
-            {
-                valueChanged = (UnitySerializableColorEvent)value;
-            }
-        }
-
-        private void OnEnable()
-        {
-            RegisterListener();
-        }
-
-        private void OnDisable()
-        {
-            UnregisterListener();
-        }
-
-        private void CascadeCall(SerializableColor color)
-        {
-            ColorChanged.Invoke(color);
-        }
+        public override UnityDataEvent<SerializableColor> m_responce => changed;
     }
 }

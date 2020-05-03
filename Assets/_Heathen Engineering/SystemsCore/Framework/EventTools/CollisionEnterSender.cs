@@ -6,7 +6,7 @@ namespace HeathenEngineering.Events
     /// <summary>
     /// A componenet behaviour that riases a <see cref="CollisionGameEvent"/> in the OnCollisionEnter UnityEvent.
     /// </summary>
-    [AddComponentMenu("Heathen/Events/Collision Enter Sender")]
+    [AddComponentMenu("System Core/Events/Collision Enter Sender")]
     public class CollisionEnterSender : MonoBehaviour
     {
         [Header("Game Event")]

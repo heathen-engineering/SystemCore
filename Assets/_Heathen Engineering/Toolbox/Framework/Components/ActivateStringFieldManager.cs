@@ -3,7 +3,7 @@ using HeathenEngineering.Scriptable;
 
 namespace HeathenEngineering.Tools
 {
-    [AddComponentMenu("Heathen/Application/Manager Activator")]
+    [AddComponentMenu("System Core/Application/Manager Activator")]
     public class ActivateStringFieldManager : MonoBehaviour
     {
         [Tooltip("This field manager will be activated as the 'Active Manager' when this control awakes.")]

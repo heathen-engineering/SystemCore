@@ -3,11 +3,11 @@ using UnityEngine;
 
 namespace HeathenEngineering.Events
 {
-    [AddComponentMenu("Heathen/Events/Trigger Enter Sender")]
+    [AddComponentMenu("System Core/Events/Trigger Enter Sender")]
     public class TriggerEnterSender : MonoBehaviour
     {
         [Header("Game Event")]
-        public TriggerGameEvent PhysicsEvent;
+        public ColliderGameEvent PhysicsEvent;
 
         [Header("Direct Event")]
         public UnityColliderEvent TriggerEntered;

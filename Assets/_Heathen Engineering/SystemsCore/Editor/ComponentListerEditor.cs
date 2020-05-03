@@ -4,10 +4,10 @@ using UnityEngine;
 
 namespace HeathenEngineering.Tools.Editors
 {
-    [CustomEditor(typeof(ComponentLister))]
+    [CustomEditor(typeof(ComponentListRegister))]
     public class ComponentListerEditor : Editor
     {
-        private ComponentLister lister;
+        private ComponentListRegister lister;
         private SerializedProperty targetList;
         private SerializedProperty componenet;
 
@@ -23,7 +23,7 @@ namespace HeathenEngineering.Tools.Editors
         {
             //EditorGUILayout.HelpBox("Componenet Lister will record the subject component to the target list on enabled and remove it from the list on disabled.", MessageType.Info);
 
-            lister = target as ComponentLister;
+            lister = target as ComponentListRegister;
 
             if (popupStyle == null)
             {

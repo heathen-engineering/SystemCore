@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace HeathenEngineering.Events
 {
-    [AddComponentMenu("Heathen/Events/Collision Stay Sender")]
+    [AddComponentMenu("System Core/Events/Collision Stay Sender")]
     public class CollisionStaySender : MonoBehaviour
     {
         [Header("Game Event")]

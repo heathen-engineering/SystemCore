@@ -4,7 +4,7 @@ using HeathenEngineering.Scriptable;
 namespace HeathenEngineering.Tools
 {
     [RequireComponent(typeof(UnityEngine.UI.Dropdown))]
-    [AddComponentMenu("Heathen/Application/Language Dropdown")]
+    [AddComponentMenu("System Core/Application/Language Dropdown")]
     public class LanguageDropdown : MonoBehaviour
     {
         [Tooltip("This field manager will be activated as the 'Active Manager' when this control awakes.")]

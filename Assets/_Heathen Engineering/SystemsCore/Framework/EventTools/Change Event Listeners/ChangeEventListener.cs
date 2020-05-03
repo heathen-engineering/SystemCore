@@ -4,34 +4,47 @@ using UnityEngine.Events;
 
 namespace HeathenEngineering.Events
 {
-    public abstract class ChangeEventListener<T> : MonoBehaviour
+    public abstract class ChangeEventListener<T> : GameEventListener<T>, IChangeEventListener<T>
     {
-        public BoolReference raiseOnBind = new BoolReference(true);
-        public abstract DataVariable<T> EventSource { get; set; }
-        
-        public abstract UnityEvent<T> ValueChanged { get; set; }
+        public abstract DataVariable<T> m_variable { get; }
+        public abstract UnityChangeEvent<T> m_changeresponce { get; }
 
-        public virtual void RegisterListener()
+        new public virtual void EnableListener()
         {
-            if (EventSource != null)
-                EventSource.AddListener(this);
-            if (raiseOnBind)
-                ValueChanged.Invoke(EventSource.Value);
+            base.EnableListener();
+
+            if (m_variable != null)
+                m_variable.AddListener(this);
         }
 
-        public virtual void UnregisterListener()
+        new public virtual void DisableListener()
         {
-            if (EventSource != null)
-                EventSource.RemoveListener(this);
+            base.DisableListener();
+
+            if (m_variable != null)
+                m_variable.RemoveListener(this);
         }
 
-        /// <summary>
-        /// Thread safe execute the value changed event
-        /// </summary>
-        /// <param name="value"></param>
-        public virtual void OnEventRaised(T value)
+        new public virtual void OnEventRaised(EventData<T> data)
         {
-            ValueChanged.Invoke(value);
+            base.OnEventRaised(data);
+
+            var nChangeEventData = new ChangeEventData<T>() { sender = data.sender, oldValue = default, newValue = data.value };
+            m_changeresponce.Invoke(nChangeEventData);
+        }
+
+        new public virtual void OnEventRaised(EventData data)
+        {
+            base.OnEventRaised(data);
+
+            var nChangeEventData = new ChangeEventData<T>() { sender = data.sender, oldValue = default, newValue = default };
+            m_changeresponce.Invoke(nChangeEventData);
+        }
+
+        public virtual void OnEventRaised(ChangeEventData<T> data)
+        {
+            m_responce.Invoke(new EventData<T>(data.sender, data.newValue));
+            m_changeresponce.Invoke(data);
         }
     }
 }

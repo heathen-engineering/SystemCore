@@ -10,7 +10,7 @@ namespace HeathenEngineering.CommandSystem
     /// Defines a set of commands and the rules for parsing said commands from various strings.
     /// This is designed to aid the developer in creating emote and other text based command systems such as you might find in MMOs and RPGs
     /// </summary>
-    [CreateAssetMenu(menuName = "Command Parser/Command Parser")]
+    [CreateAssetMenu(menuName = "System Core/Application/Command Parser")]
     [Serializable]
     public class CommandParser : ScriptableObject
     {
@@ -224,14 +224,14 @@ namespace HeathenEngineering.CommandSystem
                     }
                 }
                 else if (gameEvent.GetType() == typeof(CollisionGameEvent)
-                    || gameEvent.GetType() == typeof(TriggerGameEvent))
+                    || gameEvent.GetType() == typeof(ColliderGameEvent))
                 {
                     errorMessage = "Failed: Command found but the type is not valid for call through the parser.";
                     return false;
                 }
                 else
                 {
-                    gameEvent.Raise();
+                    gameEvent.Raise(this);
                     errorMessage = string.Empty;
                     return true;
                 }
@@ -350,7 +350,7 @@ namespace HeathenEngineering.CommandSystem
                     }
                 }
                 else if (gameEvent.GetType() == typeof(CollisionGameEvent)
-                    || gameEvent.GetType() == typeof(TriggerGameEvent))
+                    || gameEvent.GetType() == typeof(ColliderGameEvent))
                 {
                     errorMessage = "Failed: Command found but the type is not valid for call through the parser.";
                     return false;

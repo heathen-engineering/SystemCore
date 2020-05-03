@@ -1,52 +1,22 @@
 ﻿using HeathenEngineering.Scriptable;
-using HeathenEngineering.Serializable;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace HeathenEngineering.Events
 {
-    [AddComponentMenu("Heathen/Events/String Change Event Listener")]
+    [AddComponentMenu("System Core/Events/String Change Event Listener")]
     public class StringChangeEventListener : ChangeEventListener<string>
     {
         public StringVariable eventSource;
 
-        public UnityStringEvent responce;
+        public UnityStringChangeEvent valueChanged;
+        public UnityStringDataEvent changed;
 
-        public override DataVariable<string> EventSource
-        {
-            get
-            {
-                return eventSource;
-            }
+        public override DataVariable<string> m_variable => eventSource;
 
-            set
-            {
-                UnregisterListener();
-                eventSource = (StringVariable)value;
-                RegisterListener();
-            }
-        }
+        public override UnityChangeEvent<string> m_changeresponce => valueChanged;
 
-        public override UnityEvent<string> ValueChanged
-        {
-            get
-            {
-                return responce;
-            }
-            set
-            {
-                responce = (UnityStringEvent)value;
-            }
-        }
+        public override GameEvent<string> m_event => eventSource;
 
-        private void OnEnable()
-        {
-            RegisterListener();
-        }
-
-        private void OnDisable()
-        {
-            UnregisterListener();
-        }
+        public override UnityDataEvent<string> m_responce => changed;
     }
 }

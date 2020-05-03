@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace HeathenEngineering.Tools
 {
-    [AddComponentMenu("Heathen/Save Data/Data Library File Manager")]
+    [AddComponentMenu("System Core/Save Data/Data Library File Manager")]
     public class DataLibraryFileManager : MonoBehaviour
     {
         public DataLibraryVariable ActiveDataLibrary;

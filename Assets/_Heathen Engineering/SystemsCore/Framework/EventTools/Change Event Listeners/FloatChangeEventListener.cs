@@ -1,52 +1,22 @@
 ﻿using HeathenEngineering.Scriptable;
-using HeathenEngineering.Serializable;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace HeathenEngineering.Events
 {
-    [AddComponentMenu("Heathen/Events/Float Change Event Listener")]
+    [AddComponentMenu("System Core/Events/Float Change Event Listener")]
     public class FloatChangeEventListener : ChangeEventListener<float>
     {
         public FloatVariable eventSource;
 
-        public UnityFloatEvent valueChanged;
+        public UnityFloatChangeEvent valueChanged;
+        public UnityFloatDataEvent changed;
 
-        public override DataVariable<float> EventSource
-        {
-            get
-            {
-                return eventSource;
-            }
+        public override DataVariable<float> m_variable => eventSource;
 
-            set
-            {
-                UnregisterListener();
-                eventSource = (FloatVariable)value;
-                RegisterListener();
-            }
-        }
+        public override UnityChangeEvent<float> m_changeresponce => valueChanged;
 
-        public override UnityEvent<float> ValueChanged
-        {
-            get
-            {
-                return valueChanged;
-            }
-            set
-            {
-                valueChanged = (UnityFloatEvent)value;
-            }
-        }
+        public override GameEvent<float> m_event => eventSource;
 
-        private void OnEnable()
-        {
-            RegisterListener();
-        }
-
-        private void OnDisable()
-        {
-            UnregisterListener();
-        }
+        public override UnityDataEvent<float> m_responce => changed;
     }
 }

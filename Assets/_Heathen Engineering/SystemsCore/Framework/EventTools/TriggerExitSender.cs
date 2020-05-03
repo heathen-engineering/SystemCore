@@ -3,11 +3,11 @@ using UnityEngine;
 
 namespace HeathenEngineering.Events
 {
-    [AddComponentMenu("Heathen/Events/Trigger Exit Sender")]
+    [AddComponentMenu("System Core/Events/Trigger Exit Sender")]
     public class TriggerExitSender : MonoBehaviour
     {
         [Header("Game Event")]
-        public TriggerGameEvent PhysicsEvent;
+        public ColliderGameEvent PhysicsEvent;
 
         [Header("Direct Event")]
         public UnityColliderEvent TriggerExited;
