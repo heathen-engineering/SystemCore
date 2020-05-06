@@ -6,7 +6,7 @@ namespace HeathenEngineering.Events
 {
     public abstract class ChangeEventListener<T> : GameEventListener<T>, IChangeEventListener<T>
     {
-        public abstract DataVariable<T> m_variable { get; }
+        public abstract IDataVariable<T> m_variable { get; }
         public abstract UnityChangeEvent<T> m_changeresponce { get; }
 
         new public virtual void EnableListener()

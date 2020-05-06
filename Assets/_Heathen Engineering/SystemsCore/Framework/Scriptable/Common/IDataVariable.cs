@@ -9,4 +9,9 @@ namespace HeathenEngineering.Scriptable
         void SetValue(T value);
         void SetValue(IDataVariable<T> value);
     }
+
+    public interface IDataVariable : IGameEvent
+    {
+        object ObjectValue { get; set; }
+    }
 }

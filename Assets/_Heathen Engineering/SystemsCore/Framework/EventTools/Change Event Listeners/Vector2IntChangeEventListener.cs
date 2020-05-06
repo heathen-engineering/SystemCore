@@ -12,11 +12,11 @@ namespace HeathenEngineering.Events
         public UnitySerializableVector2IntChangeEvent valueChanged;
         public UnitySerializableVector2IntDataEvent changed;
 
-        public override DataVariable<SerializableVector2Int> m_variable => eventSource;
+        public override IDataVariable<SerializableVector2Int> m_variable => eventSource;
 
         public override UnityChangeEvent<SerializableVector2Int> m_changeresponce => valueChanged;
 
-        public override GameEvent<SerializableVector2Int> m_event => eventSource;
+        public override IGameEvent<SerializableVector2Int> m_event => eventSource;
 
         public override UnityDataEvent<SerializableVector2Int> m_responce => changed;
     }

@@ -8,7 +8,7 @@ namespace HeathenEngineering.Events
         public CollisionGameEvent Event;
         public UnityCollisionDataEvent Responce;
 
-        public override GameEvent<Collision> m_event => Event;
+        public override IGameEvent<Collision> m_event => Event;
 
         public override UnityDataEvent<Collision> m_responce => Responce;
     }

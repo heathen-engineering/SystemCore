@@ -5,7 +5,7 @@ namespace HeathenEngineering.Events
 {
     public abstract class CollectionChangeEventListener<T> : ChangeEventListener<List<T>>, ICollectionChangeEventListener<T>
     {
-        public abstract CollectionDataVariable<T> m_collectionvariable { get; }
+        public abstract ICollectionDataVariable<T> m_collectionvariable { get; }
         public abstract UnityCollectionChangeEvent<T> m_collectionresponce { get; }
 
         new public virtual void EnableListener()

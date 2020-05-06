@@ -8,7 +8,7 @@ namespace HeathenEngineering.Events
     [AddComponentMenu("System Core/Events/Game Event Listener")]
     public class GameEventListener : MonoBehaviour, IGameEventListener
     {
-        public GameEvent Event;
+        public IGameEvent Event;
         public UnityDataEvent Responce;
 
         private void OnEnable()
@@ -42,7 +42,7 @@ namespace HeathenEngineering.Events
     public abstract class GameEventListener<T> : MonoBehaviour, IGameEventListener<T>
     {
         public BoolReference raiseOnBind = new BoolReference(true);
-        public abstract GameEvent<T> m_event { get; }
+        public abstract IGameEvent<T> m_event { get; }
         public abstract UnityDataEvent<T> m_responce { get; }
 
         public virtual void EnableListener()

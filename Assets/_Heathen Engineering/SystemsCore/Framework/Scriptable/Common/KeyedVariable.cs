@@ -6,7 +6,7 @@ namespace HeathenEngineering.Scriptable
     public class KeyedVariable
     {
         public string Key;
-        public IDataVariable Variable;
-        public IDataVariable Default;
+        public DataVariable Variable;
+        public DataVariable Default;
     }
 }

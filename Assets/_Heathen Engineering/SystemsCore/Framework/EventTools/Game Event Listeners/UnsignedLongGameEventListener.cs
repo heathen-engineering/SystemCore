@@ -8,7 +8,7 @@ namespace HeathenEngineering.Events
         public UnsignedLongGameEvent Event;
         public UnityUnsignedLongDataEvent Responce;
 
-        public override GameEvent<ulong> m_event => Event;
+        public override IGameEvent<ulong> m_event => Event;
 
         public override UnityDataEvent<ulong> m_responce => Responce;
     }

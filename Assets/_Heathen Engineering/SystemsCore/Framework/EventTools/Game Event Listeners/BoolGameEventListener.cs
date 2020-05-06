@@ -12,7 +12,7 @@ namespace HeathenEngineering.Events
         public BoolGameEvent Event;
         public UnityBoolDataEvent Responce;
 
-        public override GameEvent<bool> m_event => Event;
+        public override IGameEvent<bool> m_event => Event;
 
         public override UnityDataEvent<bool> m_responce => Responce;
     }

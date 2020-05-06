@@ -8,7 +8,7 @@ namespace HeathenEngineering.Events
         public IntGameEvent Event;
         public UnityIntDataEvent Responce;
 
-        public override GameEvent<int> m_event => Event;
+        public override IGameEvent<int> m_event => Event;
 
         public override UnityDataEvent<int> m_responce => Responce;
     }

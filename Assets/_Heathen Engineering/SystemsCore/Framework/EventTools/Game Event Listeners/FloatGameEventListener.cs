@@ -8,7 +8,7 @@ namespace HeathenEngineering.Events
         public FloatGameEvent Event;
         public UnityFloatDataEvent Responce;
 
-        public override GameEvent<float> m_event => Event;
+        public override IGameEvent<float> m_event => Event;
 
         public override UnityDataEvent<float> m_responce => Responce;
     }

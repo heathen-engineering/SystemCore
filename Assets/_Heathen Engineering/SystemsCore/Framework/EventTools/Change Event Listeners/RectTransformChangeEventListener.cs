@@ -12,11 +12,11 @@ namespace HeathenEngineering.Events
         public UnitySerializableRectTransformChangeEvent valueChanged;
         public UnitySerializableRectTransfromDataEvent changed;
 
-        public override DataVariable<SerializableRectTransform> m_variable => eventSource;
+        public override IDataVariable<SerializableRectTransform> m_variable => eventSource;
 
         public override UnityChangeEvent<SerializableRectTransform> m_changeresponce => valueChanged;
 
-        public override GameEvent<SerializableRectTransform> m_event => eventSource;
+        public override IGameEvent<SerializableRectTransform> m_event => eventSource;
 
         public override UnityDataEvent<SerializableRectTransform> m_responce => changed;
     }

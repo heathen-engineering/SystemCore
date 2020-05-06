@@ -12,11 +12,11 @@ namespace HeathenEngineering.Events
         public UnitySerializableQuaternionChangeEvent valueChanged;
         public UnitySerializableQuaternionDataEvent changed;
 
-        public override DataVariable<SerializableQuaternion> m_variable => eventSource;
+        public override IDataVariable<SerializableQuaternion> m_variable => eventSource;
 
         public override UnityChangeEvent<SerializableQuaternion> m_changeresponce => valueChanged;
 
-        public override GameEvent<SerializableQuaternion> m_event => eventSource;
+        public override IGameEvent<SerializableQuaternion> m_event => eventSource;
 
         public override UnityDataEvent<SerializableQuaternion> m_responce => changed;
     }

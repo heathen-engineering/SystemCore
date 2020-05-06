@@ -19,7 +19,7 @@ namespace HeathenEngineering.Scriptable.Editors
         public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
         {
             SerializedProperty mode = property.FindPropertyRelative("Mode");
-            SerializedProperty constantValue = property.FindPropertyRelative("ConstantValue");
+            SerializedProperty constantValue = property.FindPropertyRelative("m_constantValue");
             SerializedProperty variable = property.FindPropertyRelative("Variable");
             if (mode.enumValueIndex != 2)
             {
@@ -49,7 +49,7 @@ namespace HeathenEngineering.Scriptable.Editors
 
             // Get properties
             SerializedProperty mode = property.FindPropertyRelative("Mode");
-            SerializedProperty constantValue = property.FindPropertyRelative("ConstantValue");
+            SerializedProperty constantValue = property.FindPropertyRelative("m_constantValue");
             SerializedProperty variable = property.FindPropertyRelative("Variable");
             
 

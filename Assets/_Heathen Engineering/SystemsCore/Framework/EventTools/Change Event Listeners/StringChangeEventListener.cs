@@ -11,11 +11,11 @@ namespace HeathenEngineering.Events
         public UnityStringChangeEvent valueChanged;
         public UnityStringDataEvent changed;
 
-        public override DataVariable<string> m_variable => eventSource;
+        public override IDataVariable<string> m_variable => eventSource;
 
         public override UnityChangeEvent<string> m_changeresponce => valueChanged;
 
-        public override GameEvent<string> m_event => eventSource;
+        public override IGameEvent<string> m_event => eventSource;
 
         public override UnityDataEvent<string> m_responce => changed;
     }
