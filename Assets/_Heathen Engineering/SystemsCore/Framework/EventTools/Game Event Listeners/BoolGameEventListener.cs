@@ -1,5 +1,6 @@
 ﻿using HeathenEngineering.Serializable;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace HeathenEngineering.Events
 {
@@ -11,9 +12,12 @@ namespace HeathenEngineering.Events
     {
         public BoolGameEvent Event;
         public UnityBoolDataEvent Responce;
+        public UnityBoolEvent UnityEvent;
 
         public override IGameEvent<bool> m_event => Event;
 
         public override UnityDataEvent<bool> m_responce => Responce;
+
+        public override UnityEvent<bool> m_unityEvent => UnityEvent;
     }
 }

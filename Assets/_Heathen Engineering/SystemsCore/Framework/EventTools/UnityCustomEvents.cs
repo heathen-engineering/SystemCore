@@ -118,6 +118,14 @@ namespace HeathenEngineering.Events
     { }
 
     [Serializable]
+    public class UnitySerializableTransformEvent : UnityEvent<SerializableTransform>
+    { }
+
+    [Serializable]
+    public class UnitySerializableRectTransformEvent : UnityEvent<SerializableRectTransform>
+    { }
+
+    [Serializable]
     public class UnityRectTransformEvent : UnityEvent<RectTransform>
     { }
 
@@ -159,6 +167,10 @@ namespace HeathenEngineering.Events
 
     [Serializable]
     public class UnityQuaternionEvent : UnityEvent<Quaternion>
+    { }
+
+    [Serializable]
+    public class UnitySerializableQuaternionEvent : UnityEvent<SerializableQuaternion>
     { }
     #endregion
 

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 namespace HeathenEngineering.Events
 {
@@ -7,9 +8,12 @@ namespace HeathenEngineering.Events
     {
         public DoubleGameEvent Event;
         public UnityDoubleDataEvent Responce;
+        public UnityDoubleEvent UnityEvent;
 
         public override IGameEvent<double> m_event => Event;
 
         public override UnityDataEvent<double> m_responce => Responce;
+
+        public override UnityEvent<double> m_unityEvent => UnityEvent;
     }
 }

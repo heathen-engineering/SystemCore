@@ -1,6 +1,7 @@
 ﻿using HeathenEngineering.Scriptable;
 using HeathenEngineering.Serializable;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace HeathenEngineering.Events
 {
@@ -11,6 +12,7 @@ namespace HeathenEngineering.Events
 
         public UnitySerializableVector2IntChangeEvent valueChanged;
         public UnitySerializableVector2IntDataEvent changed;
+        public UnitySerializableVector2IntEvent UnityEvent;
 
         public override IDataVariable<SerializableVector2Int> m_variable => eventSource;
 
@@ -19,5 +21,7 @@ namespace HeathenEngineering.Events
         public override IGameEvent<SerializableVector2Int> m_event => eventSource;
 
         public override UnityDataEvent<SerializableVector2Int> m_responce => changed;
+
+        public override UnityEvent<SerializableVector2Int> m_unityEvent => UnityEvent;
     }
 }

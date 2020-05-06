@@ -44,6 +44,7 @@ namespace HeathenEngineering.Events
         public BoolReference raiseOnBind = new BoolReference(true);
         public abstract IGameEvent<T> m_event { get; }
         public abstract UnityDataEvent<T> m_responce { get; }
+        public abstract UnityEvent<T> m_unityEvent { get; }
 
         public virtual void EnableListener()
         {
@@ -60,11 +61,13 @@ namespace HeathenEngineering.Events
         public virtual void OnEventRaised(EventData<T> data)
         {
             m_responce.Invoke(data);
+            m_unityEvent.Invoke(data.value);
         }
 
         public virtual void OnEventRaised(EventData data)
         {
             m_responce.Invoke(new EventData<T>(data.sender, default));
+            m_unityEvent.Invoke(default);
         }
     }
 }

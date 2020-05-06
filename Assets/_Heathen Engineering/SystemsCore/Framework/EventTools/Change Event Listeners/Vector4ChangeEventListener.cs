@@ -1,6 +1,7 @@
 ﻿using HeathenEngineering.Scriptable;
 using HeathenEngineering.Serializable;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace HeathenEngineering.Events
 {
@@ -11,6 +12,7 @@ namespace HeathenEngineering.Events
 
         public UnitySerializableVector4ChangeEvent valueChanged;
         public UnitySerializableVector4DataEvent changed;
+        public UnitySerializableVector4Event UnityEvent;
 
         public override IDataVariable<SerializableVector4> m_variable => eventSource;
 
@@ -19,5 +21,7 @@ namespace HeathenEngineering.Events
         public override IGameEvent<SerializableVector4> m_event => eventSource;
 
         public override UnityDataEvent<SerializableVector4> m_responce => changed;
+
+        public override UnityEvent<SerializableVector4> m_unityEvent => UnityEvent;
     }
 }

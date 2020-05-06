@@ -1,6 +1,7 @@
 ﻿using HeathenEngineering.Scriptable;
 using HeathenEngineering.Serializable;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace HeathenEngineering.Events
 {
@@ -11,6 +12,7 @@ namespace HeathenEngineering.Events
 
         public UnitySerializableRectTransformChangeEvent valueChanged;
         public UnitySerializableRectTransfromDataEvent changed;
+        public UnitySerializableRectTransformEvent UnityEvent;
 
         public override IDataVariable<SerializableRectTransform> m_variable => eventSource;
 
@@ -19,5 +21,7 @@ namespace HeathenEngineering.Events
         public override IGameEvent<SerializableRectTransform> m_event => eventSource;
 
         public override UnityDataEvent<SerializableRectTransform> m_responce => changed;
+
+        public override UnityEvent<SerializableRectTransform> m_unityEvent => UnityEvent;
     }
 }

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 namespace HeathenEngineering.Events
 {
@@ -7,9 +8,12 @@ namespace HeathenEngineering.Events
     {
         public ColliderGameEvent Event;
         public UnityColliderDataEvent Responce;
+        public UnityColliderEvent UnityEvent;
 
         public override IGameEvent<Collider> m_event => Event;
 
         public override UnityDataEvent<Collider> m_responce => Responce;
+
+        public override UnityEvent<Collider> m_unityEvent => UnityEvent;
     }
 }

@@ -1,5 +1,6 @@
 ﻿using HeathenEngineering.Scriptable;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace HeathenEngineering.Events
 {
@@ -10,6 +11,7 @@ namespace HeathenEngineering.Events
 
         public UnityBoolChangeEvent valueChanged;
         public UnityBoolDataEvent changed;
+        public UnityBoolEvent UnityEvent;
 
         public override IDataVariable<bool> m_variable => eventSource;
 
@@ -18,5 +20,7 @@ namespace HeathenEngineering.Events
         public override IGameEvent<bool> m_event => eventSource;
 
         public override UnityDataEvent<bool> m_responce => changed;
+
+        public override UnityEvent<bool> m_unityEvent => UnityEvent;
     }
 }
