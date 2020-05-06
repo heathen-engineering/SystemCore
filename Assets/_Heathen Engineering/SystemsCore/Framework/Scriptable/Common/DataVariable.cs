@@ -34,7 +34,7 @@ namespace HeathenEngineering.Scriptable
         public override object ObjectValue
         {
             get { return GetValue(); }
-            set { SetValue(value as DataVariable<T>); }
+            set { SetValue((T)value); }
         }
 
         public void AddListener(IGameEventListener<T> listener)
