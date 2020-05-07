@@ -62,17 +62,17 @@ namespace HeathenEngineering.Scriptable
             return m_value;
         }
 
-        new public void Raise(object sender)
+        public override void Raise(object sender)
         {
             Raise(sender, default, default);
         }
 
-        public void Raise(object sender, T value)
+        public virtual void Raise(object sender, T value) 
         {
             Raise(sender, default, value);
         }
 
-        public void Raise(object sender, T oldValue, T newValue)
+        public virtual void Raise(object sender, T oldValue, T newValue)
         {
             EventData nData = new EventData() { sender = sender };
             EventData<T> typeData = new EventData<T>(sender, newValue);

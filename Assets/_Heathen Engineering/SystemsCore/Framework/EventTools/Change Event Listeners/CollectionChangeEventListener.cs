@@ -8,7 +8,7 @@ namespace HeathenEngineering.Events
         public abstract ICollectionDataVariable<T> m_collectionvariable { get; }
         public abstract UnityCollectionChangeEvent<T> m_collectionresponce { get; }
 
-        new public virtual void EnableListener()
+        public override void EnableListener()
         {
             base.EnableListener();
 
@@ -16,7 +16,7 @@ namespace HeathenEngineering.Events
                 m_collectionvariable.AddListener(this);
         }
 
-        new public virtual void DisableListener()
+        public override void DisableListener()
         {
             base.DisableListener();
 
@@ -24,7 +24,7 @@ namespace HeathenEngineering.Events
                 m_collectionvariable.RemoveListener(this);
         }
 
-        new public virtual void OnEventRaised(EventData<List<T>> data)
+        public override void OnEventRaised(EventData<List<T>> data)
         {
             base.OnEventRaised(data);
 
@@ -32,7 +32,7 @@ namespace HeathenEngineering.Events
             m_collectionresponce.Invoke(nChangeEventData);
         }
 
-        new public virtual void OnEventRaised(EventData data)
+        public override void OnEventRaised(EventData data)
         {
             base.OnEventRaised(data);
 
@@ -40,7 +40,7 @@ namespace HeathenEngineering.Events
             m_collectionresponce.Invoke(nChangeEventData);
         }
 
-        new public virtual void OnEventRaised(ChangeEventData<List<T>> data)
+        public override void OnEventRaised(ChangeEventData<List<T>> data)
         {
             base.OnEventRaised(data);
 

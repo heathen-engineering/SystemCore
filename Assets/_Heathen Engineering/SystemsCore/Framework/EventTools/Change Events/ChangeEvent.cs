@@ -21,12 +21,12 @@ namespace HeathenEngineering.Events
             typeChangeSenderActions.Add(listener);
         }
 
-        new public void Raise(object sender)
+        public override void Raise(object sender)
         {
             Raise(sender, default, default);
         }
 
-        new public void Raise(object sender, T value)
+        public override void Raise(object sender, T value)
         {
             Raise(sender, default, value);
         }

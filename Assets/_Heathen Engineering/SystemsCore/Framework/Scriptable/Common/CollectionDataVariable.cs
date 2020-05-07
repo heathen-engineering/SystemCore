@@ -114,7 +114,7 @@ namespace HeathenEngineering.Scriptable
 
         public int LastIndexOf(T item) => m_value.LastIndexOf(item);
                 
-        new public void Raise(object sender, List<T> oldValue, List<T> newValue)
+        public override void Raise(object sender, List<T> oldValue, List<T> newValue)
         {
             base.Raise(sender, oldValue, newValue);
 

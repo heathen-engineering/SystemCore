@@ -9,7 +9,7 @@ namespace HeathenEngineering.Events
         public abstract IDataVariable<T> m_variable { get; }
         public abstract UnityChangeEvent<T> m_changeresponce { get; }
 
-        new public virtual void EnableListener()
+        public override void EnableListener()
         {
             base.EnableListener();
 
@@ -17,7 +17,7 @@ namespace HeathenEngineering.Events
                 m_variable.AddListener(this);
         }
 
-        new public virtual void DisableListener()
+        public override void DisableListener()
         {
             base.DisableListener();
 
@@ -25,7 +25,7 @@ namespace HeathenEngineering.Events
                 m_variable.RemoveListener(this);
         }
 
-        new public virtual void OnEventRaised(EventData<T> data)
+        public override void OnEventRaised(EventData<T> data)
         {
             base.OnEventRaised(data);
 
@@ -33,7 +33,7 @@ namespace HeathenEngineering.Events
             m_changeresponce.Invoke(nChangeEventData);
         }
 
-        new public virtual void OnEventRaised(EventData data)
+        public override void OnEventRaised(EventData data)
         {
             base.OnEventRaised(data);
 
