@@ -53,7 +53,7 @@ namespace HeathenEngineering.Events
                 if (typeListeners[i] != null)
                     typeListeners[i].OnEventRaised(typeData);
             }
-            for (int i = senderActions.Count - 1; i >= 0; i--)
+            for (int i = typeSenderActions.Count - 1; i >= 0; i--)
             {
                 if (typeSenderActions[i] != null)
                     typeSenderActions[i].Invoke(typeData);
