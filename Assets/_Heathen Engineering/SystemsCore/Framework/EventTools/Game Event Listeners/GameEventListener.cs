@@ -46,6 +46,16 @@ namespace HeathenEngineering.Events
         public abstract UnityDataEvent<T> m_responce { get; }
         public abstract UnityEvent<T> m_unityEvent { get; }
 
+        private void OnEnable()
+        {
+            EnableListener();
+        }
+
+        private void OnDisable()
+        {
+            DisableListener();
+        }
+
         public virtual void EnableListener()
         {
             if (m_event != null)
