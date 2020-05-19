@@ -10,9 +10,6 @@ namespace HeathenEngineering.Scriptable
     [Serializable]
     public abstract class CollectionDataVariable<T> : DataVariable<List<T>>, ICollectionDataVariable<T>
     {
-        [SerializeField]
-        private List<T> m_value = new List<T>();
-
         [HideInInspector]
         public List<ICollectionChangeEventListener<T>> typeCollectionChangeListeners = new List<ICollectionChangeEventListener<T>>();
         [HideInInspector]

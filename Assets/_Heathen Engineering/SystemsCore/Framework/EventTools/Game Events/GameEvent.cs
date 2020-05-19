@@ -23,6 +23,11 @@ namespace HeathenEngineering.Events
         [HideInInspector]
         public List<UnityAction<EventData>> senderActions = new List<UnityAction<EventData>>();
         
+        public virtual void Invoke(object sender)
+        {
+            Raise(sender);
+        }
+
         public virtual void Raise(object sender)
         {
             EventData nData = new EventData() { sender = sender };
@@ -81,9 +86,24 @@ namespace HeathenEngineering.Events
             typeSenderActions.Add(listener);
         }
 
+        public virtual void RaiseSimple(T value)
+        {
+            Raise(this, value);
+        }
+
+        public virtual void InvokeSimple(T value)
+        {
+            Raise(this, value);
+        }
+
         public override void Raise(object sender)
         {
             Raise(sender, default);
+        }
+
+        public virtual void Invoke(object sender, T value)
+        {
+            Raise(sender, value);
         }
 
         public virtual void Raise(object sender, T value)

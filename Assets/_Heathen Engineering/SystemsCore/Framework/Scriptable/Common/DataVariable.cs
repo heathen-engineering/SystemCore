@@ -14,7 +14,7 @@ namespace HeathenEngineering.Scriptable
     public abstract class DataVariable<T> : DataVariable, IChangeEvent<T>, IDataVariable<T>
     {
         [SerializeField]
-        private T m_value;
+        internal T m_value;
 
         [HideInInspector]
         public List<IGameEventListener<T>> typeListeners = new List<IGameEventListener<T>>();
