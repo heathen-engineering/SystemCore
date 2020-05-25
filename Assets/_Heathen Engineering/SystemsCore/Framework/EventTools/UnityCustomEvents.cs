@@ -29,6 +29,10 @@ namespace HeathenEngineering.Events
     //Commonly used single parameter UnityEvents
     #region Single Parameter Events
     [Serializable]
+    public class UnitySceneProcessStateEvent : UnityEvent<SceneProcessState>
+    { }
+
+    [Serializable]
     public class UnityDataEvent : UnityEvent<EventData>
     { }
 

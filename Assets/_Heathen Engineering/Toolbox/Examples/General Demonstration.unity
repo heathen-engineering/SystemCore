@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1433,8 +1433,6 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1102150422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1718,15 +1716,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40b37e175445bb64284b740b43e2b128, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Value:
-    Mode: 2
-    ConstantValue: 0
-    Variable: {fileID: 11400000, guid: b8dfd705c8d12724eab14f281abbdacf, type: 2}
-  InputField: {fileID: 1332389701}
-  alwaysApply:
-    Mode: 0
-    ConstantValue: 0
-    Variable: {fileID: 0}
 --- !u!114 &1332389701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1960,41 +1949,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b972a02e38b7714190e6070da728a3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isOn: 0
-  startState: 0
-  TimeSpan:
-    Mode: 0
-    ConstantValue: 0.5
-    Variable: {fileID: 0}
-  IgnoreTimeScale:
-    Mode: 0
-    ConstantValue: 0
-    Variable: {fileID: 0}
-  ContentGroup: {fileID: 1503277212}
-  AlphaOn:
-    Mode: 0
-    ConstantValue: 1
-    Variable: {fileID: 0}
-  BlockRaycastOn:
-    Mode: 0
-    ConstantValue: 0
-    Variable: {fileID: 0}
-  InteractableOn:
-    Mode: 0
-    ConstantValue: 0
-    Variable: {fileID: 0}
-  AlphaOff:
-    Mode: 0
-    ConstantValue: 0
-    Variable: {fileID: 0}
-  BlockRaycastOff:
-    Mode: 0
-    ConstantValue: 0
-    Variable: {fileID: 0}
-  InteractableOff:
-    Mode: 0
-    ConstantValue: 0
-    Variable: {fileID: 0}
 --- !u!225 &1503277215
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -2313,15 +2267,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14419a063d1e56b44934a026dbb324a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Value:
-    Mode: 2
-    ConstantValue: 
-    Variable: {fileID: 11400000, guid: 0758d1e73c39e8f419387f784b0ef05c, type: 2}
-  InputField: {fileID: 1803063254}
-  alwaysApply:
-    Mode: 0
-    ConstantValue: 0
-    Variable: {fileID: 0}
 --- !u!114 &1803063254
 MonoBehaviour:
   m_ObjectHideFlags: 0

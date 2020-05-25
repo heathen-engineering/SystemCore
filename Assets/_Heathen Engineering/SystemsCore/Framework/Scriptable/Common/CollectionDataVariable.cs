@@ -7,6 +7,7 @@ using UnityEngine.Events;
 
 namespace HeathenEngineering.Scriptable
 {
+
     [Serializable]
     public abstract class CollectionDataVariable<T> : DataVariable<List<T>>, ICollectionDataVariable<T>
     {
