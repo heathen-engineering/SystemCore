@@ -146,6 +146,21 @@ namespace HeathenEngineering.Scriptable
         {
             SetValue(value.Value);
         }
+
+        public void Invoke(T value)
+        {
+            Raise(this, value);
+        }
+
+        public void Raise(T value)
+        {
+            Raise(this, value);
+        }
+
+        public void Invoke(object sender, T value)
+        {
+            Raise(sender, value);
+        }
     }
 
     public abstract class DataVariable : GameEvent, IDataVariable

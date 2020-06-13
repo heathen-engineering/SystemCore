@@ -63,6 +63,16 @@ namespace HeathenEngineering.Events
         {
             senderActions.Remove(listener);
         }
+
+        public void Invoke()
+        {
+            Raise(this);
+        }
+
+        public void Raise()
+        {
+            Raise(this);
+        }
     }
 
     /// <summary>
@@ -142,6 +152,16 @@ namespace HeathenEngineering.Events
         public void RemoveListener(UnityAction<EventData<T>> listener)
         {
             typeSenderActions.Remove(listener);
+        }
+
+        public virtual void Invoke(T value)
+        {
+            Raise(this, value);
+        }
+
+        public virtual void Raise(T value)
+        {
+            Raise(this, value);
         }
     }
 }

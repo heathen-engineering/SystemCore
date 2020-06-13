@@ -7,6 +7,9 @@ namespace HeathenEngineering.Events
     /// </summary>
     public interface IGameEvent
     {
+        void Invoke();
+        void Raise();
+        void Invoke(object sender);
         /// <summary>
         /// Raise the game event
         /// </summary>
@@ -24,6 +27,9 @@ namespace HeathenEngineering.Events
     /// <typeparam name="T">The type of data to raise in the event</typeparam>
     public interface IGameEvent<T> : IGameEvent
     {
+        void Invoke(T value);
+        void Raise(T value);
+        void Invoke(object sender, T value);
         /// <summary>
         /// Raise the game event
         /// </summary>
