@@ -8,7 +8,7 @@ namespace HeathenEngineering.Events
     [AddComponentMenu("System Core/Events/Game Event Listener")]
     public class GameEventListener : MonoBehaviour, IGameEventListener
     {
-        public IGameEvent Event;
+        public GameEvent Event;
         public UnityDataEvent Responce;
 
         private void OnEnable()

@@ -1,8 +1,5 @@
 ﻿using HeathenEngineering.Events;
 using HeathenEngineering.Scriptable;
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace HeathenEngineering.Tools.Demo

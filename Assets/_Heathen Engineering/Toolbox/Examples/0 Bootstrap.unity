@@ -490,7 +490,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'For this scene to work you must have set your build settings up such that
-    scene "0 main.scene" is the 1st and "1 menu.scene" is the 2nd.
+    scene "0 bootstrap.scene" is the 1st and "1 entry.scene" is the 2nd.
 
 
     This scene simply demonstrates the initalization process of the Scenes Manager
@@ -514,10 +514,11 @@ MonoBehaviour:
     The Heathen Multiscene Model calls for at minimal 3 scenes, of these the first
     2 have predefined funcitons.
 
-    0 = main and is responsible for boot straping the game. This scene is never unloaded.
+    0 = boostrap and is responsible for boot straping the game. This scene is never
+    unloaded.
 
-    1 = menu and is the first interactive scene loaded, it is loaded automatically
-    by 0 once initalization is complete.
+    1 = entry and is the first interactive scene loaded, it is loaded automatically
+    by 0 once initalization is complete if so configured.
 
     X = Meaning every other scene ... these are content scenes, you will have at least
     1 but can have more if needed.
@@ -530,7 +531,7 @@ MonoBehaviour:
 
 
     All other scenes can be loaded and unload as needed. Note that the 1 scene aka
-    ''Menu'' is a single scene ... that is when 1 is loaded all other scenes (except
+    ''Entry'' is a single scene ... that is when 1 is loaded all other scenes (except
     0) are unloaded. 1 represents your main menu and should be as light as possible
     for quick load while still being a polished presentation.
 
@@ -962,6 +963,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50e4c91b605ea2c4091657e324ddc423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LoadEntryOnStartup: 1
   Started: {fileID: 11400000, guid: 5e649e85263a04d43847342131175945, type: 2}
   Updated: {fileID: 11400000, guid: a9d58c4714d03d249bea5f9fd7177487, type: 2}
   Completed: {fileID: 11400000, guid: 81bb5b986de198344a169a1a90a27374, type: 2}
