@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/_Heathen Engineering/Toolbox/Examples/0 Bootstrap.unity
+    guid: f45547968bd513744adb3c3d57fcac79
+  - enabled: 1
+    path: Assets/_Heathen Engineering/Toolbox/Examples/1 Entry.unity
+    guid: 4adfcdd904d2c3b4eb66de2d24d42b1a
   m_configObjects: {}
