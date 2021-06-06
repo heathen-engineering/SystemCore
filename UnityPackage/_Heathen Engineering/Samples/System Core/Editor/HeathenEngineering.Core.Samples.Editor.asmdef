@@ -1,0 +1,15 @@
+{
+    "name": "HeathenEngineering.Core.Samples.Editor",
+    "references": [
+        "GUID:8d2f6bd14d63c8f4687432bc4d66b7cd"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

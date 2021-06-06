@@ -1,0 +1,13 @@
+{
+  "name": "com.heathenengineering.systemcore",
+  "displayName": "System Core",
+  "version": "2.0.0-preview.1",
+  "unity": "2019.4",
+  "author": {
+    "name": "Heathen Engineering",
+    "email": "support@heathenengineering.com",
+    "url": "https://heathenengineering.com"
+  },
+  "keywords": [],
+  "description": "Scriptable Object based framework enabling the creation of game events and variables in the asset database.\n\nCreated by Heathen Engineering"
+}
