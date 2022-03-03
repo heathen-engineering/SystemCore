@@ -1,0 +1,18 @@
+{
+    "name": "Heathen.Core.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:58d42c70423577947911995925414405"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
