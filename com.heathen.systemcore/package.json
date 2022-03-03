@@ -9,5 +9,6 @@
     "url": "https://heathen.group"
   },
   "keywords": [],
+  "documentationUrl": "https://kb.heathenengineering.com/assets/system-core",
   "description": "Scriptable Object based framework enabling the creation of game events and variables in the asset database.\n\nCreated by Heathen Engineering"
 }

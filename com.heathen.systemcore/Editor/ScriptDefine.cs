@@ -35,19 +35,19 @@ namespace HeathenEngineering.Core.Editors
             }
         }
 
-        [MenuItem("Help/Heathen/System Core/Source Code (GitHub)", priority = 0)]
+        [MenuItem("Help/Heathen/System Core/Source Code (GitHub)", priority = 1)]
         public static void SourceCode()
         {
-            Application.OpenURL("https://github.com/heathen-engineering/Heathen-System-Core");
+            Application.OpenURL("https://github.com/heathen-engineering/SystemCore");
         }
 
-        [MenuItem("Help/Heathen/System Core/Documentation", priority = 0)]
+        [MenuItem("Help/Heathen/System Core/Documentation", priority = 2)]
         public static void Documentation()
         {
             Application.OpenURL("https://kb.heathenengineering.com/assets/system-core");
         }
 
-        [MenuItem("Help/Heathen/System Core/Support", priority = 0)]
+        [MenuItem("Help/Heathen/System Core/Support", priority = 3)]
         public static void Support()
         {
             Application.OpenURL("https://discord.gg/RMGtDXV");
