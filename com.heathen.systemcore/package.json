@@ -8,6 +8,9 @@
     "email": "support@heathen.group",
     "url": "https://heathen.group"
   },
+  "dependencies": {
+    "com.unity.mathematics": "1.2.5"
+  }
   "keywords": [],
   "documentationUrl": "https://kb.heathenengineering.com/assets/system-core",
   "license": "LICENSE.md",
