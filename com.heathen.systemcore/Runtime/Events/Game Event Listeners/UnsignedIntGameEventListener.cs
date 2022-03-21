@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿#if HE_SYSCORE
+using UnityEngine;
 using UnityEngine.Events;
 
 namespace HeathenEngineering.Events
@@ -17,3 +18,4 @@ namespace HeathenEngineering.Events
         public override UnityEvent<uint> m_unityEvent => UnityEvent;
     }
 }
+#endif

@@ -1,4 +1,5 @@
-﻿using System;
+﻿#if HE_SYSCORE
+using System;
 
 namespace HeathenEngineering
 {
@@ -12,3 +13,4 @@ namespace HeathenEngineering
         { }
     }
 }
+#endif

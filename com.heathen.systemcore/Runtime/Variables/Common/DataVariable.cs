@@ -1,4 +1,5 @@
-﻿using HeathenEngineering.Events;
+﻿#if HE_SYSCORE
+using HeathenEngineering.Events;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -168,3 +169,4 @@ namespace HeathenEngineering
         public abstract object ObjectValue { get; set; }
     }
 }
+#endif

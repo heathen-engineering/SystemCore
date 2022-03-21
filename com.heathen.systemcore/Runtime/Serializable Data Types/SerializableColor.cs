@@ -1,11 +1,10 @@
-﻿using System;
+﻿#if HE_SYSCORE
+using System;
 using UnityEngine;
 
 namespace HeathenEngineering.Serializable
 {
-    /// <summary>
-    /// Binary serializable bridge for UnityEngine.Color
-    /// </summary>
+    [Obsolete("Use Unity's Color")]
     [Serializable]
     public class SerializableColor : SerializableVector4
     {
@@ -86,3 +85,4 @@ namespace HeathenEngineering.Serializable
         }
     }
 }
+#endif

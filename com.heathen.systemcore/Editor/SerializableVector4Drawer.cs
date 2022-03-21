@@ -1,32 +1,34 @@
-﻿using HeathenEngineering.Serializable;
-using UnityEditor;
-using UnityEngine;
+﻿//No longer used
 
-namespace HeathenEngineering.Editors
-{
-    [CustomPropertyDrawer(typeof(SerializableVector4), true)]
-    public class SerializableVector4Drawer : PropertyDrawer
-    {
-        public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
-        {
-            EditorGUI.BeginProperty(position, label, property);
-            SerializedProperty x = property.FindPropertyRelative("x");
-            SerializedProperty y = property.FindPropertyRelative("y");
-            SerializedProperty z = property.FindPropertyRelative("z");
-            SerializedProperty w = property.FindPropertyRelative("w");
+//using HeathenEngineering.Serializable;
+//using UnityEditor;
+//using UnityEngine;
 
-            EditorGUI.BeginChangeCheck();
-            Vector4 c = new Vector4(x.floatValue, y.floatValue, z.floatValue, w.floatValue);
-            c = EditorGUI.Vector4Field(position, label, c);
-            x.floatValue = c.x;
-            y.floatValue = c.y;
-            z.floatValue = c.z;
-            w.floatValue = c.w;
+//namespace HeathenEngineering.Editors
+//{
+//    [CustomPropertyDrawer(typeof(SerializableVector4), true)]
+//    public class SerializableVector4Drawer : PropertyDrawer
+//    {
+//        public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
+//        {
+//            EditorGUI.BeginProperty(position, label, property);
+//            SerializedProperty x = property.FindPropertyRelative("x");
+//            SerializedProperty y = property.FindPropertyRelative("y");
+//            SerializedProperty z = property.FindPropertyRelative("z");
+//            SerializedProperty w = property.FindPropertyRelative("w");
 
-            if (EditorGUI.EndChangeCheck())
-                property.serializedObject.ApplyModifiedProperties();
+//            EditorGUI.BeginChangeCheck();
+//            Vector4 c = new Vector4(x.floatValue, y.floatValue, z.floatValue, w.floatValue);
+//            c = EditorGUI.Vector4Field(position, label, c);
+//            x.floatValue = c.x;
+//            y.floatValue = c.y;
+//            z.floatValue = c.z;
+//            w.floatValue = c.w;
 
-            EditorGUI.EndProperty();
-        }
-    }
-}
+//            if (EditorGUI.EndChangeCheck())
+//                property.serializedObject.ApplyModifiedProperties();
+
+//            EditorGUI.EndProperty();
+//        }
+//    }
+//}

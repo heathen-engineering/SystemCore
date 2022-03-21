@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿#if HE_SYSCORE
+using UnityEngine;
 
 namespace HeathenEngineering
 {
@@ -11,3 +12,4 @@ namespace HeathenEngineering
         }
     }
 }
+#endif

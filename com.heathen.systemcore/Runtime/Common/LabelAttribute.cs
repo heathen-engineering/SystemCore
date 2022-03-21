@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿#if HE_SYSCORE
+using UnityEngine;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -54,3 +55,4 @@ namespace HeathenEngineering.UX
 #endif
     }
 }
+#endif

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿#if HE_SYSCORE
+using System.Collections.Generic;
 using UnityEngine.Events;
 
 namespace HeathenEngineering.Events
@@ -11,3 +12,4 @@ namespace HeathenEngineering.Events
         void RemoveListener(UnityAction<CollectionChangeEventData<T>> listener);
     }
 }
+#endif

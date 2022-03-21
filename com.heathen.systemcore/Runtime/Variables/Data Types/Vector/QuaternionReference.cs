@@ -1,16 +1,18 @@
-﻿using HeathenEngineering.Serializable;
+﻿#if HE_SYSCORE
 using System;
+using Unity.Mathematics;
 
 namespace HeathenEngineering
 {
     [Serializable]
-    public class QuaternionReference : VariableReference<SerializableQuaternion>
+    public class QuaternionReference : VariableReference<quaternion>
     {
         public QuaternionVariable Variable;
 
-        public override IDataVariable<SerializableQuaternion> m_variable => Variable;
+        public override IDataVariable<quaternion> m_variable => Variable;
 
-        public QuaternionReference(SerializableQuaternion value) : base(value)
+        public QuaternionReference(quaternion value) : base(value)
         { }
     }
 }
+#endif

@@ -1,16 +1,18 @@
-﻿using HeathenEngineering.Serializable;
+﻿#if HE_SYSCORE
 using System;
+using Unity.Mathematics;
 
 namespace HeathenEngineering
 {
     [Serializable]
-    public class Vector2IntReference : VariableReference<SerializableVector2Int>
+    public class Vector2IntReference : VariableReference<int2>
     {
         public Vector2IntVariable Variable;
 
-        public override IDataVariable<SerializableVector2Int> m_variable => Variable;
+        public override IDataVariable<int2> m_variable => Variable;
 
-        public Vector2IntReference(SerializableVector2Int value) : base(value)
+        public Vector2IntReference(int2 value) : base(value)
         { }
     }
 }
+#endif

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿#if HE_SYSCORE
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -82,3 +83,4 @@ namespace HeathenEngineering.Events
         }
     }
 }
+#endif

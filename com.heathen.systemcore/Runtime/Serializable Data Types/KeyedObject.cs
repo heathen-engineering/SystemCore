@@ -1,4 +1,5 @@
-﻿using System;
+﻿#if HE_SYSCORE
+using System;
 
 namespace HeathenEngineering.Serializable
 {
@@ -11,3 +12,4 @@ namespace HeathenEngineering.Serializable
     }
     
 }
+#endif

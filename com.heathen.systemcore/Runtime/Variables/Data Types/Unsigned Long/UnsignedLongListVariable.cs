@@ -1,4 +1,5 @@
-﻿using HeathenEngineering.Events;
+﻿#if HE_SYSCORE
+using HeathenEngineering.Events;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,3 +9,4 @@ namespace HeathenEngineering
     public class UnsignedLongListVariable : DataVariable<List<ulong>>
     { }
 }
+#endif

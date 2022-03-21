@@ -1,4 +1,5 @@
-﻿namespace HeathenEngineering
+﻿#if HE_SYSCORE
+namespace HeathenEngineering
 {
     public enum VariableReferenceType
     {
@@ -16,3 +17,4 @@
         Referenced
     }
 }
+#endif

@@ -1,4 +1,5 @@
-﻿using UnityEngine.Events;
+﻿#if HE_SYSCORE
+using UnityEngine.Events;
 
 namespace HeathenEngineering.Events
 {
@@ -42,3 +43,4 @@ namespace HeathenEngineering.Events
         void RemoveListener(UnityAction<EventData<T>> listener);
     }
 }
+#endif

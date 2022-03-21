@@ -1,4 +1,5 @@
-﻿using HeathenEngineering.Events;
+﻿#if HE_SYSCORE
+using HeathenEngineering.Events;
 
 namespace HeathenEngineering
 {
@@ -15,3 +16,4 @@ namespace HeathenEngineering
         object ObjectValue { get; set; }
     }
 }
+#endif

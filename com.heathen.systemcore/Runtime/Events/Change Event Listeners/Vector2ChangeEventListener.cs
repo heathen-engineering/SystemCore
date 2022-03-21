@@ -1,12 +1,14 @@
 ﻿
 using HeathenEngineering.Serializable;
+using Unity.Mathematics;
+#if HE_SYSCORE
 using UnityEngine;
 using UnityEngine.Events;
 
 namespace HeathenEngineering.Events
 {
     [AddComponentMenu("System Core/Events/Vector2 Change Event Listener")]
-    public class Vector2ChangeEventListener : ChangeEventListener<SerializableVector2>
+    public class Vector2ChangeEventListener : ChangeEventListener<float2>
     {
         public Vector2Variable eventSource;
 
@@ -14,14 +16,15 @@ namespace HeathenEngineering.Events
         public UnitySerializableVector2DataEvent changed;
         public UnitySerializableVector2Event UnityEvent;
 
-        public override IDataVariable<SerializableVector2> m_variable => eventSource;
+        public override IDataVariable<float2> m_variable => eventSource;
 
-        public override UnityChangeEvent<SerializableVector2> m_changeresponce => valueChanged;
+        public override UnityChangeEvent<float2> m_changeresponce => valueChanged;
 
-        public override IGameEvent<SerializableVector2> m_event => eventSource;
+        public override IGameEvent<float2> m_event => eventSource;
 
-        public override UnityDataEvent<SerializableVector2> m_responce => changed;
+        public override UnityDataEvent<float2> m_responce => changed;
 
-        public override UnityEvent<SerializableVector2> m_unityEvent => UnityEvent;
+        public override UnityEvent<float2> m_unityEvent => UnityEvent;
     }
 }
+#endif

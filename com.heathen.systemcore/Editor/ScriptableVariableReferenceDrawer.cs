@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿#if HE_SYSCORE
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
@@ -145,3 +146,4 @@ namespace HeathenEngineering.Editors
         }
     }
 }
+#endif

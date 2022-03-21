@@ -1,7 +1,7 @@
-﻿
-
+﻿#if HE_SYSCORE
 using HeathenEngineering.Serializable;
 using System;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -94,7 +94,7 @@ namespace HeathenEngineering.Events
     { }
 
     [Serializable]
-    public class UnitySerializableColorEvent : UnityEvent<SerializableColor>
+    public class UnitySerializableColorEvent : UnityEvent<float4>
     { }
 
     [Serializable]
@@ -138,43 +138,43 @@ namespace HeathenEngineering.Events
     { }
 
     [Serializable]
-    public class UnityVector2Event : UnityEvent<Vector2>
+    public class UnityVector2Event : UnityEvent<float2>
     { }
 
     [Serializable]
-    public class UnityVector2IntEvent : UnityEvent<Vector2Int>
+    public class UnityVector2IntEvent : UnityEvent<int2>
     { }
 
     [Serializable]
-    public class UnitySerializableVector2Event : UnityEvent<SerializableVector2>
+    public class UnitySerializableVector2Event : UnityEvent<float2>
     { }
 
     [Serializable]
-    public class UnitySerializableVector2IntEvent : UnityEvent<SerializableVector2Int>
+    public class UnitySerializableVector2IntEvent : UnityEvent<int2>
     { }
 
     [Serializable]
-    public class UnityVector3Event : UnityEvent<Vector3>
+    public class UnityVector3Event : UnityEvent<float3>
     { }
 
     [Serializable]
-    public class UnitySerializableVector3Event : UnityEvent<SerializableVector3>
+    public class UnitySerializableVector3Event : UnityEvent<float3>
     { }
 
     [Serializable]
-    public class UnityVector4Event : UnityEvent<Vector4>
+    public class UnityVector4Event : UnityEvent<float4>
     { }
 
     [Serializable]
-    public class UnitySerializableVector4Event : UnityEvent<SerializableVector4>
+    public class UnitySerializableVector4Event : UnityEvent<float4>
     { }
 
     [Serializable]
-    public class UnityQuaternionEvent : UnityEvent<Quaternion>
+    public class UnityQuaternionEvent : UnityEvent<quaternion>
     { }
 
     [Serializable]
-    public class UnitySerializableQuaternionEvent : UnityEvent<SerializableQuaternion>
+    public class UnitySerializableQuaternionEvent : UnityEvent<quaternion>
     { }
     #endregion
 
@@ -224,7 +224,7 @@ namespace HeathenEngineering.Events
     { }
 
     [Serializable]
-    public class UnitySerializableColorDataEvent : UnityDataEvent<SerializableColor>
+    public class UnitySerializableColorDataEvent : UnityDataEvent<float4>
     { }
 
     [Serializable]
@@ -260,19 +260,19 @@ namespace HeathenEngineering.Events
     { }
 
     [Serializable]
-    public class UnityVector2DataEvent : UnityDataEvent<Vector2>
+    public class UnityVector2DataEvent : UnityDataEvent<float2>
     { }
 
     [Serializable]
-    public class UnityVector2IntDataEvent : UnityDataEvent<Vector2Int>
+    public class UnityVector2IntDataEvent : UnityDataEvent<int2>
     { }
 
     [Serializable]
-    public class UnitySerializableVector2DataEvent : UnityDataEvent<SerializableVector2>
+    public class UnitySerializableVector2DataEvent : UnityDataEvent<float2>
     { }
 
     [Serializable]
-    public class UnitySerializableVector2IntDataEvent : UnityDataEvent<SerializableVector2Int>
+    public class UnitySerializableVector2IntDataEvent : UnityDataEvent<int2>
     { }
 
     [Serializable]
@@ -280,15 +280,15 @@ namespace HeathenEngineering.Events
     { }
 
     [Serializable]
-    public class UnitySerializableVector3DataEvent : UnityDataEvent<SerializableVector3>
+    public class UnitySerializableVector3DataEvent : UnityDataEvent<float3>
     { }
 
     [Serializable]
-    public class UnityVector4DataEvent : UnityDataEvent<Vector4>
+    public class UnityVector4DataEvent : UnityDataEvent<float4>
     { }
 
     [Serializable]
-    public class UnitySerializableVector4DataEvent : UnityDataEvent<SerializableVector4>
+    public class UnitySerializableVector4DataEvent : UnityDataEvent<float4>
     { }
 
     [Serializable]
@@ -300,7 +300,7 @@ namespace HeathenEngineering.Events
     { }
 
     [Serializable]
-    public class UnitySerializableQuaternionDataEvent : UnityDataEvent<SerializableQuaternion>
+    public class UnitySerializableQuaternionDataEvent : UnityDataEvent<quaternion>
     { }
     #endregion
 
@@ -350,7 +350,7 @@ namespace HeathenEngineering.Events
     { }
 
     [Serializable]
-    public class UnitySerializableColorChangeEvent : UnityChangeEvent<SerializableColor>
+    public class UnitySerializableColorChangeEvent : UnityChangeEvent<float4>
     { }
 
     [Serializable]
@@ -386,35 +386,35 @@ namespace HeathenEngineering.Events
     { }
 
     [Serializable]
-    public class UnityVector2ChangeEvent : UnityChangeEvent<Vector2>
+    public class UnityVector2ChangeEvent : UnityChangeEvent<float2>
     { }
 
     [Serializable]
-    public class UnityVector2IntChangeEvent : UnityChangeEvent<Vector2Int>
+    public class UnityVector2IntChangeEvent : UnityChangeEvent<int2>
     { }
 
     [Serializable]
-    public class UnitySerializableVector2ChangeEvent : UnityChangeEvent<SerializableVector2>
+    public class UnitySerializableVector2ChangeEvent : UnityChangeEvent<float2>
     { }
 
     [Serializable]
-    public class UnitySerializableVector2IntChangeEvent : UnityChangeEvent<SerializableVector2Int>
+    public class UnitySerializableVector2IntChangeEvent : UnityChangeEvent<int2>
     { }
 
     [Serializable]
-    public class UnityVector3ChangeEvent : UnityChangeEvent<Vector3>
+    public class UnityVector3ChangeEvent : UnityChangeEvent<float3>
     { }
 
     [Serializable]
-    public class UnitySerializableVector3ChangeEvent : UnityChangeEvent<SerializableVector3>
+    public class UnitySerializableVector3ChangeEvent : UnityChangeEvent<float3>
     { }
 
     [Serializable]
-    public class UnityVector4ChangeEvent : UnityChangeEvent<Vector4>
+    public class UnityVector4ChangeEvent : UnityChangeEvent<float4>
     { }
 
     [Serializable]
-    public class UnitySerializableVector4ChangeEvent : UnityChangeEvent<SerializableVector4>
+    public class UnitySerializableVector4ChangeEvent : UnityChangeEvent<float4>
     { }
 
     [Serializable]
@@ -426,7 +426,7 @@ namespace HeathenEngineering.Events
     { }
 
     [Serializable]
-    public class UnitySerializableQuaternionChangeEvent : UnityChangeEvent<SerializableQuaternion>
+    public class UnitySerializableQuaternionChangeEvent : UnityChangeEvent<quaternion>
     { }
     #endregion
 
@@ -476,7 +476,7 @@ namespace HeathenEngineering.Events
     { }
 
     [Serializable]
-    public class UnitySerializableColorCollectionEvent : UnityCollectionChangeEvent<SerializableColor>
+    public class UnitySerializableColorCollectionEvent : UnityCollectionChangeEvent<float4>
     { }
 
     [Serializable]
@@ -512,39 +512,39 @@ namespace HeathenEngineering.Events
     { }
 
     [Serializable]
-    public class UnityVector2CollectionEvent : UnityCollectionChangeEvent<Vector2>
+    public class UnityVector2CollectionEvent : UnityCollectionChangeEvent<float2>
     { }
 
     [Serializable]
-    public class UnityVector2IntCollectionEvent : UnityCollectionChangeEvent<Vector2Int>
+    public class UnityVector2IntCollectionEvent : UnityCollectionChangeEvent<int2>
     { }
 
     [Serializable]
-    public class UnitySerializableVector2CollectionEvent : UnityCollectionChangeEvent<SerializableVector2>
+    public class UnitySerializableVector2CollectionEvent : UnityCollectionChangeEvent<float2>
     { }
 
     [Serializable]
-    public class UnitySerializableVector2IntCollectionEvent : UnityCollectionChangeEvent<SerializableVector2Int>
+    public class UnitySerializableVector2IntCollectionEvent : UnityCollectionChangeEvent<int2>
     { }
 
     [Serializable]
-    public class UnityVector3CollectionEvent : UnityCollectionChangeEvent<Vector3>
+    public class UnityVector3CollectionEvent : UnityCollectionChangeEvent<float3>
     { }
 
     [Serializable]
-    public class UnitySerializableVector3CollectionEvent : UnityCollectionChangeEvent<SerializableVector3>
+    public class UnitySerializableVector3CollectionEvent : UnityCollectionChangeEvent<float3>
     { }
 
     [Serializable]
-    public class UnityVector4CollectionEvent : UnityCollectionChangeEvent<Vector4>
+    public class UnityVector4CollectionEvent : UnityCollectionChangeEvent<float4>
     { }
 
     [Serializable]
-    public class UnitySerializableVector4CollectionEvent : UnityCollectionChangeEvent<SerializableVector4>
+    public class UnitySerializableVector4CollectionEvent : UnityCollectionChangeEvent<float4>
     { }
 
     [Serializable]
-    public class UnityQuaternionCollectionEvent : UnityCollectionChangeEvent<Quaternion>
+    public class UnityQuaternionCollectionEvent : UnityCollectionChangeEvent<quaternion>
     { }
     #endregion
     #endregion
@@ -608,19 +608,19 @@ namespace HeathenEngineering.Events
     { }
 
     [Serializable]
-    public class UnitySenderVector2Event : UnityEvent<GameObject, Vector2>
+    public class UnitySenderVector2Event : UnityEvent<GameObject, float2>
     { }
 
     [Serializable]
-    public class UnitySenderVector3Event : UnityEvent<GameObject, Vector3>
+    public class UnitySenderVector3Event : UnityEvent<GameObject, float3>
     { }
 
     [Serializable]
-    public class UnitySenderVector4Event : UnityEvent<GameObject, Vector4>
+    public class UnitySenderVector4Event : UnityEvent<GameObject, float4>
     { }
 
     [Serializable]
-    public class UnitySenderQuaternionEvent : UnityEvent<GameObject, Quaternion>
+    public class UnitySenderQuaternionEvent : UnityEvent<GameObject, quaternion>
     { }
     #endregion
 
@@ -655,15 +655,16 @@ namespace HeathenEngineering.Events
     { }
 
     [Serializable]
-    public class VariableVector2Event : UnityEvent<Vector2Variable, Vector2>
+    public class VariableVector2Event : UnityEvent<Vector2Variable, float2>
     { }
 
     [Serializable]
-    public class VariableVector3Event : UnityEvent<Vector3Variable, Vector3>
+    public class VariableVector3Event : UnityEvent<Vector3Variable, float3>
     { }
 
     [Serializable]
-    public class VariableVector4Event : UnityEvent<Vector4Variable, Vector4>
+    public class VariableVector4Event : UnityEvent<Vector4Variable, float4>
     { }
     #endregion
 }
+#endif

@@ -1,4 +1,5 @@
-﻿using HeathenEngineering.Serializable;
+﻿#if HE_SYSCORE
+using HeathenEngineering.Serializable;
 using System;
 using System.Collections.Generic;
 
@@ -14,3 +15,4 @@ namespace HeathenEngineering
         { }
     }
 }
+#endif

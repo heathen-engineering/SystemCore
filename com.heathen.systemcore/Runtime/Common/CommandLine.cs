@@ -1,4 +1,5 @@
-﻿using System;
+﻿#if HE_SYSCORE
+using System;
 using UnityEngine;
 
 namespace HeathenEngineering
@@ -124,3 +125,4 @@ namespace HeathenEngineering
         }
     }
 }
+#endif

@@ -1,4 +1,4 @@
-﻿
+﻿#if HE_SYSCORE
 using HeathenEngineering.Serializable;
 using UnityEngine;
 using UnityEngine.Events;
@@ -25,3 +25,4 @@ namespace HeathenEngineering.Events
         public override UnityEvent<SerializableRectTransform> m_unityEvent => UnityEvent;
     }
 }
+#endif

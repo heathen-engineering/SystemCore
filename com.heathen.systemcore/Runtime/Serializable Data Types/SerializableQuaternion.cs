@@ -1,14 +1,10 @@
-﻿using System;
+﻿#if HE_SYSCORE
+using System;
 using UnityEngine;
 
 namespace HeathenEngineering.Serializable
 {
-    /// <summary>
-    /// Binary serializable bridge for UnityEngine.Quaternion
-    /// </summary>
-    /// <remarks>
-    /// Derived from and implicitly convertable with SerializableVector4
-    /// </remarks>
+    [Obsolete("Use Unity's Mathmatics.quaternion")]
     [Serializable]
     public class SerializableQuaternion : SerializableVector4
     {
@@ -44,3 +40,4 @@ namespace HeathenEngineering.Serializable
         }
     }
 }
+#endif

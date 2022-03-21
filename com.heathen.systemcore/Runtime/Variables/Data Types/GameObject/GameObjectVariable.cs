@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿#if HE_SYSCORE
+using UnityEngine;
 
 namespace HeathenEngineering
 {
@@ -6,3 +7,4 @@ namespace HeathenEngineering
     public class GameObjectPointerVariable : DataVariable<GameObject>
     { }
 }
+#endif

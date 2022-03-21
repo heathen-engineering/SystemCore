@@ -1,15 +1,22 @@
-﻿using HeathenEngineering.Serializable;
+﻿#if HE_SYSCORE
+using HeathenEngineering.Serializable;
 using System;
+using Unity.Mathematics;
+using UnityEngine;
 
 namespace HeathenEngineering
 {
     [Serializable]
-    public class ColorReference : VariableReference<SerializableColor>
+    public class ColorReference : VariableReference<float4>
     {
         public ColorVariable Variable;
-        public override IDataVariable<SerializableColor> m_variable => Variable;
+        public override IDataVariable<float4> m_variable => Variable;
 
-        public ColorReference(SerializableColor value) : base(value)
+        public ColorReference(float4 value) : base(value)
+        { }
+
+        public ColorReference(Color value) : base((Vector4)value)
         { }
     }
 }
+#endif

@@ -1,4 +1,5 @@
-﻿using System;
+﻿#if HE_SYSCORE
+using System;
 using System.Collections.Generic;
 
 namespace HeathenEngineering
@@ -13,3 +14,4 @@ namespace HeathenEngineering
         { }
     }
 }
+#endif

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿#if HE_SYSCORE
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace HeathenEngineering
@@ -7,3 +8,4 @@ namespace HeathenEngineering
     public class StringListVariable : CollectionDataVariable<string>
     { }
 }
+#endif

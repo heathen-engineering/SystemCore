@@ -1,12 +1,13 @@
-﻿
+﻿#if HE_SYSCORE
 using HeathenEngineering.Serializable;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Events;
 
 namespace HeathenEngineering.Events
 {
     [AddComponentMenu("System Core/Events/Color Change Event Listener")]
-    public class ColorChangeEventListener : ChangeEventListener<SerializableColor>
+    public class ColorChangeEventListener : ChangeEventListener<float4>
     {
         public ColorVariable eventSource;
 
@@ -14,14 +15,15 @@ namespace HeathenEngineering.Events
         public UnitySerializableColorDataEvent changed;
         public UnitySerializableColorEvent UnityEvent;
 
-        public override IDataVariable<SerializableColor> m_variable => eventSource;
+        public override IDataVariable<float4> m_variable => eventSource;
 
-        public override UnityChangeEvent<SerializableColor> m_changeresponce => valueChanged;
+        public override UnityChangeEvent<float4> m_changeresponce => valueChanged;
 
-        public override IGameEvent<SerializableColor> m_event => eventSource;
+        public override IGameEvent<float4> m_event => eventSource;
 
-        public override UnityDataEvent<SerializableColor> m_responce => changed;
+        public override UnityDataEvent<float4> m_responce => changed;
 
-        public override UnityEvent<SerializableColor> m_unityEvent => UnityEvent;
+        public override UnityEvent<float4> m_unityEvent => UnityEvent;
     }
 }
+#endif

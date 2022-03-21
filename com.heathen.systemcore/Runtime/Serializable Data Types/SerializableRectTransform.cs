@@ -1,47 +1,43 @@
-﻿using System;
+﻿#if HE_SYSCORE
+using System;
+using Unity.Mathematics;
 using UnityEngine;
 
 namespace HeathenEngineering.Serializable
 {
-    /// <summary>
-    /// Binary serializable bridge for UnityEngine.RectTransform
-    /// </summary>
-    /// <remarks>
-    /// Derived from and convertable from SerializableTransform
-    /// </remarks>
     [Serializable]
     public class SerializableRectTransform : SerializableTransform
     {
-        public SerializableVector2 anchorMax;
-        public SerializableVector2 anchorMin;
-        public SerializableVector2 pivot;
+        public float2 anchorMax;
+        public float2 anchorMin;
+        public float2 pivot;
 
         public SerializableRectTransform() : base()
         {
-            anchorMax = new SerializableVector2(0.5f, 0.5f);
-            anchorMin = new SerializableVector2(0.5f, 0.5f);
-            pivot = new SerializableVector2(0.5f, 0.5f);
+            anchorMax = new float2(0.5f, 0.5f);
+            anchorMin = new float2(0.5f, 0.5f);
+            pivot = new float2(0.5f, 0.5f);
         }
 
         public SerializableRectTransform(Transform transform) : base(transform)
         {
-            anchorMax = new SerializableVector2(0.5f, 0.5f);
-            anchorMin = new SerializableVector2(0.5f, 0.5f);
-            pivot = new SerializableVector2(0.5f, 0.5f);
+            anchorMax = new float2(0.5f, 0.5f);
+            anchorMin = new float2(0.5f, 0.5f);
+            pivot = new float2(0.5f, 0.5f);
         }
 
         public SerializableRectTransform(RectTransform rectTransform) : base(rectTransform)
         {
-            anchorMax = new SerializableVector2(rectTransform.anchorMax);
-            anchorMin = new SerializableVector2(rectTransform.anchorMin);
-            pivot = new SerializableVector2(rectTransform.pivot);
+            anchorMax = new float2(rectTransform.anchorMax);
+            anchorMin = new float2(rectTransform.anchorMin);
+            pivot = new float2(rectTransform.pivot);
         }
 
-        public SerializableRectTransform(Vector3 position, Quaternion rotation, Vector3 localScale, Vector2 anchorMin, Vector2 anchorMax, Vector2 pivot) : base(position, rotation, localScale)
+        public SerializableRectTransform(float3 position, quaternion rotation, float3 localScale, float2 anchorMin, float2 anchorMax, float2 pivot) : base(position, rotation, localScale)
         {
-            anchorMax = new SerializableVector2(anchorMax);
-            anchorMin = new SerializableVector2(anchorMin);
-            pivot = new SerializableVector2(pivot);
+            anchorMax = new float2(anchorMax);
+            anchorMin = new float2(anchorMin);
+            pivot = new float2(pivot);
         }
 
         public static implicit operator SerializableRectTransform(RectTransform value)
@@ -58,3 +54,4 @@ namespace HeathenEngineering.Serializable
         }
     }
 }
+#endif

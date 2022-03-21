@@ -1,4 +1,5 @@
-﻿using System;
+﻿#if HE_SYSCORE
+using System;
 using System.Collections.Generic;
 
 namespace HeathenEngineering
@@ -122,3 +123,4 @@ namespace HeathenEngineering
         public VariableReferenceType Mode = VariableReferenceType.Constant;
     }
 }
+#endif

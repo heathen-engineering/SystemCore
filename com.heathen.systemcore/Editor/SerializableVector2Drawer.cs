@@ -1,28 +1,32 @@
-﻿using HeathenEngineering.Serializable;
-using UnityEditor;
-using UnityEngine;
+﻿//No Longer Used
 
-namespace HeathenEngineering.Editors
-{
-    [CustomPropertyDrawer(typeof(SerializableVector2))]
-    public class SerializableVector2Drawer : PropertyDrawer
-    {
-        public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
-        {
-            EditorGUI.BeginProperty(position, label, property);
-            SerializedProperty x = property.FindPropertyRelative("x");
-            SerializedProperty y = property.FindPropertyRelative("y");
+//#if HE_SYSCORE
+//using HeathenEngineering.Serializable;
+//using UnityEditor;
+//using UnityEngine;
 
-            EditorGUI.BeginChangeCheck();
-            Vector2 c = new Vector2(x.floatValue, y.floatValue);
-            c = EditorGUI.Vector2Field(position, label, c);
-            x.floatValue = c.x;
-            y.floatValue = c.y;
+//namespace HeathenEngineering.Editors
+//{
+//    [CustomPropertyDrawer(typeof(SerializableVector2))]
+//    public class SerializableVector2Drawer : PropertyDrawer
+//    {
+//        public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
+//        {
+//            EditorGUI.BeginProperty(position, label, property);
+//            SerializedProperty x = property.FindPropertyRelative("x");
+//            SerializedProperty y = property.FindPropertyRelative("y");
 
-            if (EditorGUI.EndChangeCheck())
-                property.serializedObject.ApplyModifiedProperties();
+//            EditorGUI.BeginChangeCheck();
+//            Vector2 c = new Vector2(x.floatValue, y.floatValue);
+//            c = EditorGUI.Vector2Field(position, label, c);
+//            x.floatValue = c.x;
+//            y.floatValue = c.y;
 
-            EditorGUI.EndProperty();
-        }
-    }
-}
+//            if (EditorGUI.EndChangeCheck())
+//                property.serializedObject.ApplyModifiedProperties();
+
+//            EditorGUI.EndProperty();
+//        }
+//    }
+//}
+//#endif

@@ -1,4 +1,5 @@
-﻿using HeathenEngineering.Events;
+﻿#if HE_SYSCORE
+using HeathenEngineering.Events;
 using System;
 using System.Collections.Generic;
 
@@ -75,3 +76,4 @@ namespace HeathenEngineering
         bool TrueForAll(Predicate<T> match);
     }
 }
+#endif

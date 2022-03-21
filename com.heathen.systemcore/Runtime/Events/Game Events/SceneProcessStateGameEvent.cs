@@ -1,4 +1,4 @@
-﻿
+﻿#if HE_SYSCORE
 using UnityEngine;
 
 namespace HeathenEngineering.Events
@@ -8,3 +8,4 @@ namespace HeathenEngineering.Events
     public class SceneProcessStateGameEvent : GameEvent<SceneProcessState>
     { }
 }
+#endif

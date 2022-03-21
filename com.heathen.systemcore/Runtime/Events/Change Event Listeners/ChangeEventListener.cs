@@ -1,4 +1,4 @@
-﻿
+﻿#if HE_SYSCORE
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -48,3 +48,4 @@ namespace HeathenEngineering.Events
         }
     }
 }
+#endif

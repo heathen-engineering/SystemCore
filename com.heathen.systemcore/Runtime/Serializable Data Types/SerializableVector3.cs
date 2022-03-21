@@ -1,15 +1,10 @@
-﻿
+﻿#if HE_SYSCORE
 using System;
 using UnityEngine;
 
 namespace HeathenEngineering.Serializable
 {
-    /// <summary>
-    /// Binary serializable bridge for UnityEngine.Vector3
-    /// </summary>
-    /// <remarks>
-    /// Derived from SerializableVector2
-    /// </remarks>
+    [Obsolete("Use Unity's Mathmatics.float3")]
     [Serializable]
     public class SerializableVector3 : SerializableVector2
     {
@@ -47,3 +42,4 @@ namespace HeathenEngineering.Serializable
         }
     }
 }
+#endif

@@ -1,5 +1,5 @@
-﻿using HeathenEngineering.Events;
-using HeathenEngineering.Serializable;
+﻿#if HE_SYSCORE
+using HeathenEngineering.Events;
 using UnityEngine;
 
 namespace HeathenEngineering
@@ -50,3 +50,4 @@ namespace HeathenEngineering
         public UnityStringEvent ValueChanged;
     }
 }
+#endif

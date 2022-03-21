@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿#if HE_SYSCORE
+using UnityEngine;
 
 namespace HeathenEngineering.Events
 {
@@ -7,3 +8,4 @@ namespace HeathenEngineering.Events
     public class FloatChangeEvent : ChangeEvent<float>
     { }
 }
+#endif

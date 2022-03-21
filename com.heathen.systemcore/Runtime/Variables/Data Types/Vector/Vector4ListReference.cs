@@ -1,16 +1,18 @@
-﻿using HeathenEngineering.Serializable;
+﻿#if HE_SYSCORE
 using System;
 using System.Collections.Generic;
+using Unity.Mathematics;
 
 namespace HeathenEngineering
 {
     [Serializable]
-    public class Vector4ListReference : VariableReference<List<SerializableVector4>>
+    public class Vector4ListReference : VariableReference<List<float4>>
     {
         public Vector4ListVariable Variable;
-        public override IDataVariable<List<SerializableVector4>> m_variable => Variable;
+        public override IDataVariable<List<float4>> m_variable => Variable;
 
-        public Vector4ListReference(List<SerializableVector4> value) : base(value)
+        public Vector4ListReference(List<float4> value) : base(value)
         { }
     }
 }
+#endif

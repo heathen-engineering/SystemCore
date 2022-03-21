@@ -1,4 +1,5 @@
-﻿using HeathenEngineering.Events;
+﻿#if HE_SYSCORE
+using HeathenEngineering.Events;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -229,3 +230,4 @@ namespace HeathenEngineering
         IEnumerator IEnumerable.GetEnumerator() => m_value.GetEnumerator();
     }
 }
+#endif

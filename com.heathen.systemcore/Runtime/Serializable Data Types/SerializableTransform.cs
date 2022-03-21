@@ -1,5 +1,6 @@
-﻿
+﻿#if HE_SYSCORE
 using System;
+using Unity.Mathematics;
 using UnityEngine;
 
 namespace HeathenEngineering.Serializable
@@ -13,43 +14,43 @@ namespace HeathenEngineering.Serializable
     [Serializable]
     public class SerializableTransform
     {
-        public SerializableVector3 position;
-        public SerializableQuaternion rotation;
-        public SerializableVector3 localScale;
+        public float3 position;
+        public quaternion rotation;
+        public float3 localScale;
 
         public SerializableTransform()
         {
-            position = new SerializableVector3();
-            rotation = new SerializableQuaternion();
-            localScale = new SerializableVector3(1,1,1);
+            position = new float3();
+            rotation = new quaternion();
+            localScale = new float3(1,1,1);
         }
 
-        public SerializableTransform(SerializableVector3 position, SerializableQuaternion rotation, SerializableVector3 localScale)
+        public SerializableTransform(float3 position, quaternion rotation, float3 localScale)
         {
-            this.position = new SerializableVector3(position);
-            this.rotation = new SerializableQuaternion(rotation);
-            this.localScale = new SerializableVector3(localScale);
+            this.position = position;
+            this.rotation = rotation;
+            this.localScale = localScale;
         }
 
         public SerializableTransform(Transform transform)
         {
-            this.position = new SerializableVector3(transform.position);
-            this.rotation = new SerializableQuaternion(transform.rotation);
-            this.localScale = new SerializableVector3(transform.localScale);
+            this.position = transform.position;
+            this.rotation = transform.rotation;
+            this.localScale = transform.localScale;
         }
 
         public SerializableTransform(Vector3 position, Quaternion rotation, Vector3 localScale)
         {
-            this.position = new SerializableVector3(position);
-            this.rotation = new SerializableQuaternion(rotation);
-            this.localScale = new SerializableVector3(localScale);
+            this.position = position;
+            this.rotation = rotation;
+            this.localScale = localScale;
         }
 
         public void SetTransform(Transform transform)
         {
-            transform.position = new Vector3(position.x, position.y, position.z);
-            transform.rotation = new Quaternion(rotation.x, rotation.y, rotation.z, rotation.w);
-            transform.localScale = new Vector3(localScale.x, localScale.y, localScale.z);
+            transform.position = position;
+            transform.rotation = rotation;
+            transform.localScale = localScale;
         }
 
         public static implicit operator SerializableTransform(Transform value)
@@ -58,3 +59,4 @@ namespace HeathenEngineering.Serializable
         }
     }
 }
+#endif

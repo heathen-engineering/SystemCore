@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿#if HE_SYSCORE
+using UnityEngine;
 #if UNITY_EDITOR
 #endif
 
@@ -8,3 +9,4 @@ namespace HeathenEngineering.UX
     public class ScriptableTag : ScriptableObject
     { }
 }
+#endif

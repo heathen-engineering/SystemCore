@@ -1,9 +1,10 @@
-﻿
+﻿#if HE_SYSCORE
 using System;
 using UnityEngine;
 
 namespace HeathenEngineering.Serializable
 {
+    [Obsolete("Use Unity's Mathmatics.int2")]
     [Serializable]
     public class SerializableVector2Int
     {
@@ -41,3 +42,4 @@ namespace HeathenEngineering.Serializable
         }
     }
 }
+#endif

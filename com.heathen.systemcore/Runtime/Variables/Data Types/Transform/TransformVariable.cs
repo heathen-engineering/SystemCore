@@ -1,4 +1,5 @@
-﻿using HeathenEngineering.Serializable;
+﻿#if HE_SYSCORE
+using HeathenEngineering.Serializable;
 using UnityEngine;
 
 namespace HeathenEngineering
@@ -7,3 +8,4 @@ namespace HeathenEngineering
     public class TransformVariable : DataVariable<SerializableTransform>
     { }
 }
+#endif
