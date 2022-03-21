@@ -1,7 +1,5 @@
-﻿
-using HeathenEngineering.Serializable;
+﻿#if HE_SYSCORE
 using Unity.Mathematics;
-#if HE_SYSCORE
 using UnityEngine;
 using UnityEngine.Events;
 
