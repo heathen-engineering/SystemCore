@@ -11,15 +11,6 @@ namespace HeathenEngineering.Core.Editors
     {
         private static List<IEnumerator> cooroutines;
 
-        [InitializeOnLoadMethod]
-        public static void InitOnLoadMethod()
-        {
-            if (!SessionState.GetBool("SystemCoreValidating", false))
-            {
-                StartCoroutine(Validate());
-            }
-        }
-
         [MenuItem("Help/Heathen/System Core/Update (Package Manager)", priority = 0)]
         public static void InstallSystemCoreMenuItem()
         {
@@ -45,82 +36,6 @@ namespace HeathenEngineering.Core.Editors
         public static void Support()
         {
             Application.OpenURL("https://discord.gg/RMGtDXV");
-        }
-
-        private static IEnumerator Validate()
-        {
-            SessionState.SetBool("SystemCoreValidating", true);
-            var listRequest = Client.List();
-            var hasMathmatics = false;
-
-            if (listRequest.Status == StatusCode.Success)
-            {
-                if (listRequest.Result.Any(p => p.name == "com.unity.mathematics"))
-                    hasMathmatics = true;
-                else
-                    hasMathmatics = false;
-            }
-            else
-            {
-                while (listRequest.Status == StatusCode.InProgress)
-                {
-                    yield return null;
-                }
-            }
-
-            if (listRequest.Status == StatusCode.Success)
-            {
-                if (listRequest.Result.Any(p => p.name == "com.unity.mathematics"))
-                    hasMathmatics = true;
-                else
-                    hasMathmatics = false;
-            }
-
-            if (!hasMathmatics)
-            {
-                var process = Client.Add("com.unity.mathematics");
-                if (process.Status == StatusCode.Failure)
-                    Debug.LogError("PackageManager install failed for Unity Mathematics");
-                else if (process.Status == StatusCode.Success)
-                    Debug.Log("Mathematics " + process.Result.version + " installation complete");
-                else
-                {
-                    Debug.Log("Installing Mathematics ...");
-                    while (process.Status == StatusCode.InProgress)
-                    {
-                        yield return null;
-                    }
-                }
-
-                if (process.Status == StatusCode.Failure)
-                    Debug.LogError("PackageManager install failed, Error Message: " + process.Error.message);
-                else if (process.Status == StatusCode.Success)
-                {
-                    Debug.Log("Mathematics " + process.Result.version + " installation complete");
-                    hasMathmatics = true;
-                }
-            }
-
-            if (hasMathmatics)
-            {
-                string currentDefines = PlayerSettings.GetScriptingDefineSymbolsForGroup(EditorUserBuildSettings.selectedBuildTargetGroup);
-                HashSet<string> defines = new HashSet<string>(currentDefines.Split(';'))
-                {
-                    "HE_SYSCORE"
-                };
-
-                string newDefines = string.Join(";", defines);
-                if (newDefines != currentDefines)
-                {
-                    PlayerSettings.SetScriptingDefineSymbolsForGroup(EditorUserBuildSettings.selectedBuildTargetGroup, newDefines);
-                }
-            }
-            else
-            {
-                Debug.LogWarning("Failed to locate or install Unity's Mathmatics. This is a requirement to use System Core. The HE_SYSCORE define will not be added and related and dependent code will not be compiled.\nPlease install Unity's Mathematics from Package Manager and then update System Core via the menu.");
-            }
-
-            SessionState.SetBool("SystemCoreValidating", false);
         }
 
         private static IEnumerator InstallSystemCore()
