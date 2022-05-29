@@ -1,6 +1,6 @@
 # Note
 
-This license does not in any way prevent or hender you from creating software such as a game or other application that uses this software and from putting your game or other app up for sale. The clause in this license which notes that you may not sell "the software" is refering to this software. That is you may not sell Steamworks Foundaiton. You may distribute it as source or compiled assebly with your game, app or tools without issue or limitaiton but you may not sell Steamworks Foundation it is the property of Heathen Limited.
+This license does not in any way prevent or hender you from creating software such as a game or other application that uses this software and from putting your game or other app up for sale. The clause in this license which notes that you may not sell "the software" is refering to this software. That is you may not sell System Core. You may distribute it as source or compiled assebly with your game, app or tools without issue or limitaiton but you may not sell System Core it is the property of Heathen Limited.
 
 # License
 
