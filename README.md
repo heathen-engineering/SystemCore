@@ -1,3 +1,13 @@
+
+[![Unity Version](https://img.shields.io/badge/Unity-2021.3%20LTS%2B-blueviolet?logo=unity)](https://unity3d.com/get-unity/download)
+[![Unity Pipeline Support (Built-In)](https://img.shields.io/badge/BiRP_✔️-darkgreen?logo=unity)](https://unity3d.com/get-unity/download)
+[![Unity Pipeline Support (URP)](https://img.shields.io/badge/URP_✔️-blue?logo=unity)](https://unity3d.com/get-unity/download)
+[![Unity Pipeline Support (HDRP)](https://img.shields.io/badge/HDRP_✔️-darkred?logo=unity)](https://unity3d.com/get-unity/download)
+
+[![GitHub followers](https://img.shields.io/github/followers/heathen-engineering?style=social)](https://github.com/heathen-engineering?tab=followers)
+[![Twitter Follow](https://img.shields.io/twitter/follow/HeathenEngineer?style=social)](http://twitter.com/intent/user?screen_name=HeathenEngineer)
+[![YouTube Channel Views](https://img.shields.io/youtube/channel/views/UCmPD1mHqMk_emJ25KbaGpWQ?style=social)](https://www.youtube.com/Heathenengineering)
+[![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UCmPD1mHqMk_emJ25KbaGpWQ?style=social)](https://www.youtube.com/Heathenengineering)
 ## Become a GitHub Sponsor
 Support Heathen and get instant access to [Steamworks Complete](https://www.heathen.group/steamworks), [PhysKit Complete](https://www.heathen.group/physkit) and [UX Complete](https://www.heathen.group/ux) by becoming a [Heathen Sponsor](https://github.com/sponsors/heathen-engineering) here on GitHub!
 
