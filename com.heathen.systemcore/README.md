@@ -7,10 +7,14 @@
 * [Reporting Issues](https://github.com/heathen-engineering/SystemCore/issues)
   
 ## Installation
-* Package Manager
+* Package Manager (Git URL)
 1) Open the package manager and click the '+' (plus) button located in the upper left of the window
 2) Select `Add package from git URL...` when prompted provide the following URL:  
-`https://github.com/heathen-engineering/SystemCore.git?path=/com.heathen.systemcore`  
+`https://github.com/heathen-engineering/SystemCore.git?path=/com.heathen.systemcore`
+* Package Manger (Add from Disk)
+1) Clone the repository to your local disk ... DO NOT clone this into your Unity project it should be somewhere on your HD not part of your Unity project.
+2) Open the package manager and click the '+' (plus) button located in the upper left of the window
+3) Select `Add package from Disk...` when prompted browse top the location you cloned the repository to and select the `/com.heathen.systemcore/package.json`
 
 ## Description
 _System Core_ is a framework which allows the developer to create variables and events as objects in the Unity asset database aka the asset folder.
