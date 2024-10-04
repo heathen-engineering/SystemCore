@@ -50,7 +50,7 @@ namespace HeathenEngineering.Events
 
         public virtual void OnEventRaised(CollectionChangeEventData<T> data)
         {
-            m_responce.Invoke(new EventData<List<T>>(data.sender, data.newState));
+            m_response.Invoke(new EventData<List<T>>(data.sender, data.newState));
             m_changeresponce.Invoke(new ChangeEventData<List<T>>(data.sender, default, data.newState));
             m_collectionresponce.Invoke(data);
         }

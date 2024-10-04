@@ -19,7 +19,7 @@ namespace HeathenEngineering.Events
 
         public override IGameEvent<bool> m_event => eventSource;
 
-        public override UnityDataEvent<bool> m_responce => changed;
+        public override UnityDataEvent<bool> m_response => changed;
 
         public override UnityEvent<bool> m_unityEvent => UnityEvent;
     }

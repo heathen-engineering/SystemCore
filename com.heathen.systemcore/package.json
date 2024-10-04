@@ -1,15 +1,15 @@
 {
   "name": "com.heathen.systemcore",
   "displayName": "System Core",
-  "version": "3.18.2",
-  "unity": "2020.3",
+  "version": "3.19",
+  "unity": "2021.3",
   "author": {
     "name": "Heathen Group",
     "email": "support@heathen.group",
     "url": "https://heathen.group"
   },
   "dependencies": {
-    "com.unity.mathematics": "1.2.5"
+    "com.unity.mathematics": "1.2.6"
   },
   "keywords": [],
   "documentationUrl": "https://kb.heathenengineering.com/assets/system-core",

@@ -62,7 +62,31 @@ namespace HeathenEngineering.Events
     { }
 
     [Serializable]
+    public class UnityFloat2Event : UnityEvent<float2>
+    { }
+
+    [Serializable]
+    public class UnityFloat3Event : UnityEvent<float3>
+    { }
+
+    [Serializable]
+    public class UnityFloat4Event : UnityEvent<float4>
+    { }
+
+    [Serializable]
     public class UnityIntEvent : UnityEvent<int>
+    { }
+
+    [Serializable]
+    public class UnityInt2Event : UnityEvent<int2>
+    { }
+
+    [Serializable]
+    public class UnityInt3Event : UnityEvent<int3>
+    { }
+
+    [Serializable]
+    public class UnityInt4Event : UnityEvent<int4>
     { }
 
     [Serializable]
@@ -192,7 +216,31 @@ namespace HeathenEngineering.Events
     { }
 
     [Serializable]
+    public class UnityFloat2DataEvent : UnityDataEvent<float2>
+    { }
+
+    [Serializable]
+    public class UnityFloat3DataEvent : UnityDataEvent<float3>
+    { }
+
+    [Serializable]
+    public class UnityFloat4DataEvent : UnityDataEvent<float4>
+    { }
+
+    [Serializable]
     public class UnityIntDataEvent : UnityDataEvent<int>
+    { }
+
+    [Serializable]
+    public class UnityInt2DataEvent : UnityDataEvent<int2>
+    { }
+
+    [Serializable]
+    public class UnityInt3DataEvent : UnityDataEvent<int3>
+    { }
+
+    [Serializable]
+    public class UnityInt4DataEvent : UnityDataEvent<int4>
     { }
 
     [Serializable]

@@ -43,7 +43,7 @@ namespace HeathenEngineering.Events
 
         public virtual void OnEventRaised(ChangeEventData<T> data)
         {
-            m_responce.Invoke(new EventData<T>(data.sender, data.newValue));
+            m_response.Invoke(new EventData<T>(data.sender, data.newValue));
             m_changeresponce.Invoke(data);
         }
     }

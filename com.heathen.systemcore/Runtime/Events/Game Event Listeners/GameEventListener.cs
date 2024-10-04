@@ -9,7 +9,10 @@ namespace HeathenEngineering.Events
     public class GameEventListener : MonoBehaviour, IGameEventListener
     {
         public GameEvent Event;
-        public UnityDataEvent Responce;
+        public UnityDataEvent Response;
+
+        [Obsolete("Please use Response")]
+        public UnityDataEvent Responce => Response;
 
         private void OnEnable()
         {
@@ -35,7 +38,7 @@ namespace HeathenEngineering.Events
 
         public virtual void OnEventRaised(EventData data)
         {
-            Responce.Invoke(data);
+            Response.Invoke(data);
         }
     }
 
@@ -43,7 +46,7 @@ namespace HeathenEngineering.Events
     {
         public BoolReference raiseOnBind = new BoolReference(true);
         public abstract IGameEvent<T> m_event { get; }
-        public abstract UnityDataEvent<T> m_responce { get; }
+        public abstract UnityDataEvent<T> m_response { get; }
         public abstract UnityEvent<T> m_unityEvent { get; }
 
         private void OnEnable()
@@ -70,13 +73,13 @@ namespace HeathenEngineering.Events
 
         public virtual void OnEventRaised(EventData<T> data)
         {
-            m_responce.Invoke(data);
+            m_response.Invoke(data);
             m_unityEvent.Invoke(data.value);
         }
 
         public virtual void OnEventRaised(EventData data)
         {
-            m_responce.Invoke(new EventData<T>(data.sender, default));
+            m_response.Invoke(new EventData<T>(data.sender, default));
             m_unityEvent.Invoke(default);
         }
     }

@@ -1,4 +1,5 @@
 ﻿#if HE_SYSCORE
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -8,12 +9,15 @@ namespace HeathenEngineering.Events
     public class LongGameEventListener : GameEventListener<long>
     {
         public LongGameEvent Event;
-        public UnityLongDataEvent Responce;
+        public UnityLongDataEvent Response;
         public UnityLongEvent UnityEvent;
+
+        [Obsolete("Please use Response")]
+        public UnityLongDataEvent Responce => Response;
 
         public override IGameEvent<long> m_event => Event;
 
-        public override UnityDataEvent<long> m_responce => Responce;
+        public override UnityDataEvent<long> m_response => Response;
 
         public override UnityEvent<long> m_unityEvent => UnityEvent;
     }

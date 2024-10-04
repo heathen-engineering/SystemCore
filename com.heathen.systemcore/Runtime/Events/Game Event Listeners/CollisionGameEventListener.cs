@@ -1,4 +1,5 @@
 ﻿#if HE_SYSCORE
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -8,12 +9,15 @@ namespace HeathenEngineering.Events
     public class CollisionGameEventListener : GameEventListener<Collision>
     {
         public CollisionGameEvent Event;
-        public UnityCollisionDataEvent Responce;
+        public UnityCollisionDataEvent Response;
         public UnityCollisionEvent UnityEvent;
+
+        [Obsolete("Please use Response")]
+        public UnityCollisionDataEvent Responce => Response;
 
         public override IGameEvent<Collision> m_event => Event;
 
-        public override UnityDataEvent<Collision> m_responce => Responce;
+        public override UnityDataEvent<Collision> m_response => Response;
 
         public override UnityEvent<Collision> m_unityEvent => UnityEvent;
     }

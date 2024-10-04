@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace HeathenEngineering.Serializable
 {
-    [Obsolete("Use Unity's Mathmatics.float2", true)]
+    [Obsolete("Use Unity's Mathematics.float2", true)]
     [Serializable]
     public class SerializableVector2
     {

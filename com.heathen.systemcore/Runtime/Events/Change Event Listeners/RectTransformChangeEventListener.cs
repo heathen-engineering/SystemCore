@@ -20,7 +20,7 @@ namespace HeathenEngineering.Events
 
         public override IGameEvent<SerializableRectTransform> m_event => eventSource;
 
-        public override UnityDataEvent<SerializableRectTransform> m_responce => changed;
+        public override UnityDataEvent<SerializableRectTransform> m_response => changed;
 
         public override UnityEvent<SerializableRectTransform> m_unityEvent => UnityEvent;
     }

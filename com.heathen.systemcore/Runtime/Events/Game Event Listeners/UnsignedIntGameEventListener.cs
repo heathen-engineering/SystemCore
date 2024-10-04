@@ -1,4 +1,5 @@
 ﻿#if HE_SYSCORE
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -8,12 +9,15 @@ namespace HeathenEngineering.Events
     public class UnsignedIntGameEventListener : GameEventListener<uint>
     {
         public UnsignedIntGameEvent Event;
-        public UnityUnsignedIntDataEvent Responce;
+        public UnityUnsignedIntDataEvent Response;
         public UnityUnsignedIntEvent UnityEvent;
+
+        [Obsolete("Please use Response")]
+        public UnityUnsignedIntDataEvent Responce => Response;
 
         public override IGameEvent<uint> m_event => Event;
 
-        public override UnityDataEvent<uint> m_responce => Responce;
+        public override UnityDataEvent<uint> m_response => Response;
 
         public override UnityEvent<uint> m_unityEvent => UnityEvent;
     }
